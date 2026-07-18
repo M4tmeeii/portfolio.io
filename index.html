@@ -1,4 +1,4 @@
-<!-- STREAMING_CHUNK: Configuring head and style templates... -->
+<!-- STREAMING_CHUNK: Configuring head and custom jelly button style animations... -->
 <!DOCTYPE html>
 <html lang="th" class="scroll-smooth">
 
@@ -33,6 +33,20 @@
             animation: gentle-swing 8s infinite ease-in-out;
         }
 
+        /* 🍮 แอนิเมชันปุ่มเด้งดึ๋งสไตล์เยลลี่ (Jelly Squish Animation) */
+        @keyframes jelly-pop {
+            0% { transform: scale(1, 1); }
+            30% { transform: scale(1.15, 0.85); }
+            40% { transform: scale(0.85, 1.15); }
+            50% { transform: scale(1.05, 0.95); }
+            65% { transform: scale(0.98, 1.02); }
+            75% { transform: scale(1.02, 0.98); }
+            100% { transform: scale(1, 1); }
+        }
+        .jelly-hover:hover {
+            animation: jelly-pop 0.6s ease-in-out;
+        }
+
         /* ✨ ปรับแต่ง Scrollbar สตรอว์เบอร์รีนม */
         ::-webkit-scrollbar {
             width: 10px;
@@ -55,9 +69,9 @@
     </style>
 </head>
 
+<!-- STREAMING_CHUNK: Setting up background gradients and aura blobs... -->
 <body class="text-[#4A3E3D] min-h-screen antialiased selection:bg-[#FFCAD4] selection:text-[#4A3E3D] overflow-x-hidden relative">
 
-    <!-- STREAMING_CHUNK: Setting up gradient aura clouds for backdrops... -->
     <!-- ☁️ แผ่นออร่าละมุนตาสามสีลอยนุ่มนวลด้านหลัง -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div class="absolute top-[-10%] left-[-10%] w-[35rem] h-[35rem] bg-[#FFCAD4]/30 rounded-full blur-[100px] animate-swing-calm"></div>
@@ -66,9 +80,9 @@
     </div>
 
     <!-- ================= TOP HUD STATUS BAR (แถบรายงานสถานะสไตล์โฮมเพจแท็บเล็ต) ================= -->
-    <!-- STREAMING_CHUNK: Building the header and desktop status bar... -->
+    <!-- STREAMING_CHUNK: Loading the top HUD navigation status bar... -->
     <div class="max-w-6xl mx-auto px-4 pt-6 relative z-10">
-        <div class="bg-white/80 backdrop-blur-md border border-[#FFCAD4]/60 rounded-[1.5rem] px-6 py-3 flex justify-between items-center shadow-sm">
+        <div class="bg-white/80 backdrop-blur-md border-2 border-[#FFCAD4] rounded-[1.5rem] px-6 py-3 flex justify-between items-center shadow-sm">
             <div class="text-xs md:text-sm font-bold tracking-wider flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 <span>SYSTEM_CONNECTED // NATTHIDA.R</span>
@@ -81,10 +95,11 @@
     </div>
 
     <!-- ================= MAIN COLLABORATIVE WORKSPACE ================= -->
+    <!-- STREAMING_CHUNK: Structuring the main workspace containing profile and document layout... -->
     <main class="max-w-6xl mx-auto px-4 py-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         <!-- ================= LEFT COLUMN: COZY PROFILE WIDGET ================= -->
-        <!-- STREAMING_CHUNK: Creating the interactive profile widget (Left Column)... -->
+        <!-- STREAMING_CHUNK: Designing the left profile widget card with responsive elements... -->
         <section class="lg:col-span-4 bg-white/90 border-4 border-[#FFCAD4] rounded-[2.5rem] p-6 shadow-xl relative overflow-hidden flex flex-col justify-between">
             <div class="absolute top-2 right-4 text-3xl opacity-20">🌸</div>
             
@@ -107,6 +122,7 @@
                 </div>
 
                 <!-- แถบค่าสถานะดุ๊กดิ๊กสุดน่ารัก (Interactive Progress) -->
+                <!-- STREAMING_CHUNK: Rendering the creative stat bars... -->
                 <div class="space-y-3 bg-[#FFF5F6] p-4 rounded-2xl border border-[#FFCAD4]/40">
                     <div class="space-y-1">
                         <div class="flex justify-between text-[10px] font-bold text-slate-500">
@@ -145,30 +161,31 @@
         </section>
 
         <!-- ================= RIGHT COLUMN: INTERACTIVE FILE PLANNER ================= -->
-        <!-- STREAMING_CHUNK: Building the file folder structure and tab triggers... -->
+        <!-- STREAMING_CHUNK: Setting up the tab navigation controllers with squishy 3D buttons... -->
         <section class="lg:col-span-8 space-y-6">
             
-            <!-- หูแฟ้มควบคุมระดับหัวข้อ (Tab Navigation Controls) -->
+            <!-- หูแฟ้มควบคุมระดับหัวข้อ (Tab Navigation Controls with Satisfying Jelly & 3D Bouncy Effects) -->
             <nav class="flex flex-wrap gap-2 md:gap-3 border-b-4 border-[#FFCAD4] pb-0.5">
-                <button onclick="switchTab('about')" id="tab-about" class="tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-[#FFF5F6] text-[#F4978E] translate-y-[4px]">
-                    <i class="fa-solid fa-address-card mr-1"></i> Bio
+                <button onclick="switchTab('about')" id="tab-about" class="tab-btn jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all duration-300 border-2 border-b-0 border-[#F4978E] bg-[#FFF5F6] text-[#F4978E] translate-y-[4px] shadow-none">
+                    <i class="fa-solid fa-address-card mr-1 text-sm"></i> Bio
                 </button>
-                <button onclick="switchTab('education')" id="tab-education" class="tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E]">
-                    <i class="fa-solid fa-graduation-cap mr-1"></i> Education
+                <button onclick="switchTab('education')" id="tab-education" class="tab-btn jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all duration-300 border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E] hover:-translate-y-1 hover:shadow-[0_4px_0_0_#FFCAD4] active:translate-y-0 active:shadow-none">
+                    <i class="fa-solid fa-graduation-cap mr-1 text-sm"></i> Education
                 </button>
-                <button onclick="switchTab('portfolio')" id="tab-portfolio" class="tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E]">
-                    <i class="fa-solid fa-images mr-1"></i> Gallery
+                <button onclick="switchTab('portfolio')" id="tab-portfolio" class="tab-btn jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all duration-300 border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E] hover:-translate-y-1 hover:shadow-[0_4px_0_0_#FFCAD4] active:translate-y-0 active:shadow-none">
+                    <i class="fa-solid fa-images mr-1 text-sm"></i> Gallery
                 </button>
-                <button onclick="switchTab('contact')" id="tab-contact" class="tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E]">
-                    <i class="fa-solid fa-envelope mr-1"></i> Contact
+                <button onclick="switchTab('contact')" id="tab-contact" class="tab-btn jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all duration-300 border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E] hover:-translate-y-1 hover:shadow-[0_4px_0_0_#FFCAD4] active:translate-y-0 active:shadow-none">
+                    <i class="fa-solid fa-envelope mr-1 text-sm"></i> Contact
                 </button>
             </nav>
 
             <!-- แผงบรรจุหน้าต่างแฟ้มเอกสาร (Tabbed Content Sheets) -->
+            <!-- STREAMING_CHUNK: Designing tab panels content layouts... -->
             <div class="bg-white/95 border-4 border-[#FFCAD4] rounded-b-[2.5rem] rounded-tr-[2.5rem] p-6 md:p-8 shadow-xl min-h-[460px] relative">
                 
                 <!-- 📁 SHEET 1: ABOUT & GOALS -->
-                <!-- STREAMING_CHUNK: Rendering the About Me and Goals content card... -->
+                <!-- STREAMING_CHUNK: Rendering the main bio sheet containing info widgets... -->
                 <div id="content-about" class="tab-content space-y-6">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
                         <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-circle-user"></i></span>
@@ -204,7 +221,7 @@
                 </div>
 
                 <!-- 📁 SHEET 2: EDUCATION TIMELINE -->
-                <!-- STREAMING_CHUNK: Designing the Education timeline card... -->
+                <!-- STREAMING_CHUNK: Designing the step-by-step school path timeline card... -->
                 <div id="content-education" class="tab-content space-y-6 hidden">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
                         <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-school"></i></span>
@@ -251,8 +268,8 @@
                     </div>
                 </div>
 
-                <!-- 📁 SHEET 3: PORTFOLIO ALBUM (โพลารอยด์แสดงครบถ้วน 11 หน้าเสถียรสูงสุด) -->
-                <!-- STREAMING_CHUNK: Generating the 11-page Polaroid album grid... -->
+                <!-- 📁 SHEET 3: PORTFOLIO ALBUM (โพลารอยด์แสดงครบถ้วน 11 หน้าพร้อมปุ่มโพลารอยด์น่ากดส่อง) -->
+                <!-- STREAMING_CHUNK: Loading the 11 polaroid-style image cards grid... -->
                 <div id="content-portfolio" class="tab-content space-y-6 hidden">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
                         <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-photo-film"></i></span>
@@ -263,14 +280,15 @@
                         <script>
                             for (let i = 1; i <= 11; i++) {
                                 document.write(`
-                                    <div class="group bg-white border border-[#FFCAD4] p-2.5 rounded-[1.2rem] shadow-sm hover:shadow-md hover:border-[#F4978E] transition-all cursor-pointer relative" onclick="openLightbox('images/page${i}.jpg')">
-                                        <div class="aspect-[3/4] bg-slate-50 rounded-lg overflow-hidden relative">
-                                            <img src="images/page${i}.jpg" alt="Portfolio Page ${i}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102" onerror="this.src='https://placehold.co/300x400/ffe5ec/4a3e3d?text=Page+${i}'">
+                                    <div class="group bg-white border border-[#FFCAD4] p-2.5 rounded-[1.2rem] shadow-sm hover:shadow-md hover:border-[#F4978E] hover:-translate-y-1 transition-all duration-300 cursor-pointer relative" onclick="openLightbox('images/page${i}.jpg')">
+                                        <div class="aspect-[3/4] bg-slate-50 rounded-lg overflow-hidden relative border border-slate-100">
+                                            <img src="images/page${i}.jpg" alt="Portfolio Page ${i}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/300x400/ffe5ec/4a3e3d?text=Page+${i}'">
+                                            <!-- ปุ่มสแกนขยายใหญ่สไตล์ลูกกวาดน่ากด -->
                                             <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                                <span class="text-xs font-bold bg-white text-[#4A3E3D] px-2.5 py-1 rounded-full shadow-md"><i class="fa-solid fa-expand-alt mr-1"></i> VIEW</span>
+                                                <span class="jelly-hover text-xs font-bold bg-[#F4978E] text-white border-2 border-white px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1 transform scale-90 group-hover:scale-100 transition-transform"><i class="fa-solid fa-magnifying-glass-plus"></i> VIEW</span>
                                             </div>
                                         </div>
-                                        <p class="mt-2 text-center font-bold text-[9px] text-slate-400">PAGE_${i.toString().padStart(2, '0')}</p>
+                                        <p class="mt-2 text-center font-bold text-[9px] text-slate-400 group-hover:text-[#F4978E] transition-colors">PAGE_${i.toString().padStart(2, '0')}</p>
                                     </div>
                                 `);
                             }
@@ -279,7 +297,7 @@
                 </div>
 
                 <!-- 📁 SHEET 4: CONTACT DESK -->
-                <!-- STREAMING_CHUNK: Developing the Contact envelope system... -->
+                <!-- STREAMING_CHUNK: Coding the interactive envelope cards for social connections... -->
                 <div id="content-contact" class="tab-content space-y-6 hidden">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
                         <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-paper-plane"></i></span>
@@ -288,8 +306,8 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <!-- Email -->
-                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border border-[#FFCAD4]/60">
-                            <div class="w-10 h-10 bg-[#FFCAD4]/30 text-[#F4978E] rounded-full flex items-center justify-center text-lg"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4]/60 hover:border-[#F4978E] transition-all hover:scale-[1.01] shadow-sm">
+                            <div class="w-10 h-10 bg-[#FFCAD4]/30 text-[#F4978E] rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-solid fa-envelope"></i></div>
                             <div class="overflow-hidden">
                                 <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">EMAIL</span>
                                 <span class="text-xs font-bold text-[#4A3E3D] block truncate">Email : __________________</span>
@@ -297,8 +315,8 @@
                         </div>
 
                         <!-- Facebook -->
-                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border border-[#FFCAD4]/60">
-                            <div class="w-10 h-10 bg-blue-100 text-blue-400 rounded-full flex items-center justify-center text-lg"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4]/60 hover:border-[#F4978E] transition-all hover:scale-[1.01] shadow-sm">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-400 rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-brands fa-facebook-f"></i></div>
                             <div class="overflow-hidden">
                                 <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">FACEBOOK</span>
                                 <span class="text-xs font-bold text-[#4A3E3D] block truncate">Facebook : __________________</span>
@@ -306,8 +324,8 @@
                         </div>
 
                         <!-- Instagram -->
-                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border border-[#FFCAD4]/60">
-                            <div class="w-10 h-10 bg-pink-100 text-pink-400 rounded-full flex items-center justify-center text-lg"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4]/60 hover:border-[#F4978E] transition-all hover:scale-[1.01] shadow-sm">
+                            <div class="w-10 h-10 bg-pink-100 text-pink-400 rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-brands fa-instagram"></i></div>
                             <div class="overflow-hidden">
                                 <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">INSTAGRAM</span>
                                 <span class="text-xs font-bold text-[#4A3E3D] block truncate">Instagram : __________________</span>
@@ -315,8 +333,8 @@
                         </div>
 
                         <!-- GitHub -->
-                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border border-[#FFCAD4]/60">
-                            <div class="w-10 h-10 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center text-lg"><i class="fa-brands fa-github"></i></div>
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4]/60 hover:border-[#F4978E] transition-all hover:scale-[1.01] shadow-sm">
+                            <div class="w-10 h-10 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-brands fa-github"></i></div>
                             <div class="overflow-hidden">
                                 <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">GITHUB</span>
                                 <span class="text-xs font-bold text-[#4A3E3D] block truncate">GitHub : __________________</span>
@@ -331,9 +349,10 @@
     </main>
 
     <!-- ================= PREMIUM LIGHTBOX POPUP SYSTEM ================= -->
-    <!-- STREAMING_CHUNK: Integrating stable premium lightbox expansion component... -->
+    <!-- STREAMING_CHUNK: Setting up the lightbox component with jelly close buttons... -->
     <div id="lightbox" class="fixed inset-0 bg-[#4A3E3D]/70 backdrop-blur-sm hidden z-[100] flex-col items-center justify-center p-4 transition-all duration-300 opacity-0">
-        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-[#4A3E3D] bg-white border-2 border-[#FFCAD4] text-xl w-10 h-10 flex items-center justify-center rounded-full shadow-xl hover:text-[#F4978E] transition-all">
+        <!-- ปุ่มปิดกล่องขยายสไตล์วุ้นเด้งเร้าใจ -->
+        <button onclick="closeLightbox()" class="jelly-hover absolute top-6 right-6 text-[#4A3E3D] bg-white border-4 border-[#FFCAD4] text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-xl hover:text-[#F4978E] hover:border-[#F4978E] hover:-translate-y-1 active:translate-y-0 transition-all">
             <i class="fa-solid fa-xmark"></i>
         </button>
         <div class="max-w-3xl max-h-[85vh] overflow-hidden rounded-[2.5rem] border-4 border-[#FFCAD4] bg-white p-2 shadow-2xl">
@@ -347,9 +366,9 @@
     </footer>
 
     <!-- ================= JAVASCRIPT LOGIC CONTROLLERS ================= -->
-    <!-- STREAMING_CHUNK: Implementing Lightbox and Tab logic JS... -->
+    <!-- STREAMING_CHUNK: Binding javascript interactive click event listeners for tabs... -->
     <script>
-        // 1. ฟังก์ชันสลับการแสดงผลแผ่นเอกสารแฟ้ม (Tab Switcher)
+        // 1. ฟังก์ชันสลับการแสดงผลแผ่นเอกสารแฟ้ม (Tab Switcher with 3D tactile feedback classes)
         function switchTab(tabId) {
             // ซ่อนทุกๆ Content Sheet
             const contents = document.querySelectorAll('.tab-content');
@@ -357,18 +376,18 @@
                 content.classList.add('hidden');
             });
 
-            // คืนค่าปุ่มกดทั้งหมดให้เป็นสถานะ Deactive
+            // คืนค่าปุ่มกดทั้งหมดให้เป็นสถานะ Deactive พร้อมแอนิเมชันน่ากด
             const tabs = document.querySelectorAll('.tab-btn');
             tabs.forEach(tab => {
-                tab.className = "tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E]";
+                tab.className = "tab-btn jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all duration-300 border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E] hover:-translate-y-1 hover:shadow-[0_4px_0_0_#FFCAD4] active:translate-y-0 active:shadow-none";
             });
 
             // แสดงเฉพาะ Content Sheet ที่เลือก
             document.getElementById(`content-${tabId}`).classList.remove('hidden');
 
-            // ตกแต่งสไตล์ปุ่มที่กำลังเลือกอยู่
+            // ตกแต่งสไตล์ปุ่มที่กำลังเลือกอยู่ (Active Tab) ให้แนบสนิท ยุบตัวลง 3D ยึดโยงกับแผ่นคอนเทนต์
             const activeTab = document.getElementById(`tab-${tabId}`);
-            activeTab.className = "tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-[#FFF5F6] text-[#F4978E] translate-y-[4px]";
+            activeTab.className = "tab-btn jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all duration-300 border-2 border-b-0 border-[#F4978E] bg-[#FFF5F6] text-[#F4978E] translate-y-[4px] shadow-none";
         }
 
         // 2. แผงควบคุมระบบ Lightbox ส่องรูปภาพขยายใหญ่
