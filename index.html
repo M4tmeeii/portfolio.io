@@ -1,21 +1,21 @@
-<!-- STREAMING_CHUNK: Setting up HTML head, imports, and custom styles... -->
+<!-- STREAMING_CHUNK: Configuring head and style templates... -->
 <!DOCTYPE html>
 <html lang="th" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natthida Ratsamee - Premium Cute Pink Portfolio</title>
+    <title>Natthida Ratsamee - Cozy Interactive Workspace</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Fredoka & Kanit เพื่อความนุ่มมนระดับพรีเมียม -->
+    <!-- Google Fonts: Fredoka & Kanit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome สำหรับไอคอนน่ารักพรีเมียม -->
+    <!-- FontAwesome สำหรับชุดไอคอนและสัญลักษณ์ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -24,20 +24,16 @@
             background-color: #FFF2F4;
         }
 
-        /* 🌸 แอนิเมชันลูกบอลพาสเทลลอยตัวนุ่มนิ่มแบบสงบนิ่ง */
-        @keyframes gentle-float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(1deg); }
-        }
+        /* 🌸 แอนิเมชันลอยเบาๆ แบบนิ่งสงบ */
         @keyframes gentle-swing {
-            0%, 100% { transform: rotate(-1deg); }
-            50% { transform: rotate(1.5deg); }
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(0.5deg); }
         }
-        
-        .animate-float-calm { animation: gentle-float 8s infinite ease-in-out; }
-        .animate-swing-cute { animation: gentle-swing 5s infinite ease-in-out; }
+        .animate-swing-calm {
+            animation: gentle-swing 8s infinite ease-in-out;
+        }
 
-        /* ✨ ตกแต่ง Scrollbar ลายสตรอว์เบอร์รีนมพรีเมียม */
+        /* ✨ ปรับแต่ง Scrollbar สตรอว์เบอร์รีนม */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -59,364 +55,323 @@
     </style>
 </head>
 
-<!-- 🎨 THEME: Creamy Strawberry & Soft Blossom Pink (เน้นความนิ่ง เรียบร้อย คลีน อ่านง่าย เหมาะสำหรับส่งคุณครู) -->
 <body class="text-[#4A3E3D] min-h-screen antialiased selection:bg-[#FFCAD4] selection:text-[#4A3E3D] overflow-x-hidden relative">
 
-    <!-- STREAMING_CHUNK: Embedding decorative pastel background design elements... -->
-    <!-- ☁️ พิกัดออร่าละมุนใจด้านหลัง (ช่วยสร้างมิติแต่ไม่ดึงสายตาออกนอกผลงาน) -->
+    <!-- STREAMING_CHUNK: Setting up gradient aura clouds for backdrops... -->
+    <!-- ☁️ แผ่นออร่าละมุนตาสามสีลอยนุ่มนวลด้านหลัง -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div class="absolute top-10 left-[-5%] w-[35rem] h-[35rem] bg-[#FFCAD4]/25 rounded-full blur-[100px] animate-float-calm"></div>
-        <div class="absolute bottom-20 right-[-10%] w-[40rem] h-[40rem] bg-[#F4978E]/15 rounded-full blur-[120px] animate-float-calm" style="animation-delay: -3s;"></div>
-        <div class="absolute top-[40%] left-[20%] w-72 h-72 bg-[#FFF5F6]/60 rounded-full blur-[80px] animate-float-calm" style="animation-delay: -5s;"></div>
+        <div class="absolute top-[-10%] left-[-10%] w-[35rem] h-[35rem] bg-[#FFCAD4]/30 rounded-full blur-[100px] animate-swing-calm"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-[#F4978E]/15 rounded-full blur-[120px] animate-swing-calm" style="animation-delay: -3s;"></div>
+        <div class="absolute top-[40%] right-[20%] w-[25rem] h-[25rem] bg-[#FFE5EC]/60 rounded-full blur-[80px] animate-swing-calm" style="animation-delay: -5s;"></div>
     </div>
 
-
-    <!-- ================= FLOATING CUTE NAVIGATION HEADER ================= -->
-    <!-- STREAMING_CHUNK: Placing the sticky floating navigation bar... -->
-    <div class="fixed top-4 left-0 w-full px-4 z-50 pointer-events-none">
-        <header class="max-w-4xl mx-auto bg-white/85 backdrop-blur-md border border-[#FFCAD4]/60 shadow-[0_10px_25px_-5px_rgba(244,151,142,0.12)] rounded-[2rem] px-6 py-3.5 flex justify-between items-center pointer-events-auto transition-all">
-            <div class="text-sm md:text-base font-bold tracking-wider text-[#4A3E3D] flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-[#F4978E] animate-pulse"></span>
-                <span class="font-bold tracking-tight">🌸 NATTHIDA.PORT</span>
+    <!-- ================= TOP HUD STATUS BAR (แถบรายงานสถานะสไตล์โฮมเพจแท็บเล็ต) ================= -->
+    <!-- STREAMING_CHUNK: Building the header and desktop status bar... -->
+    <div class="max-w-6xl mx-auto px-4 pt-6 relative z-10">
+        <div class="bg-white/80 backdrop-blur-md border border-[#FFCAD4]/60 rounded-[1.5rem] px-6 py-3 flex justify-between items-center shadow-sm">
+            <div class="text-xs md:text-sm font-bold tracking-wider flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>SYSTEM_CONNECTED // NATTHIDA.R</span>
             </div>
-            <nav class="hidden md:flex space-x-6 font-bold text-xs uppercase tracking-wide text-[#4A3E3D]/80">
-                <a href="#home" class="hover:text-[#F4978E] transition-all">Home</a>
-                <a href="#about" class="hover:text-[#F4978E] transition-all">About</a>
-                <a href="#education" class="hover:text-[#F4978E] transition-all">Education</a>
-                <a href="#portfolio" class="hover:text-[#F4978E] transition-all">Portfolio</a>
-                <a href="#contact" class="hover:text-[#F4978E] transition-all">Contact</a>
+            <div class="flex items-center gap-4 text-[11px] font-bold text-[#F4978E] tracking-widest">
+                <span><i class="fa-solid fa-wifi"></i> 100% SIGNAL</span>
+                <span><i class="fa-solid fa-heart"></i> LOVE_MODE</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MAIN COLLABORATIVE WORKSPACE ================= -->
+    <main class="max-w-6xl mx-auto px-4 py-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- ================= LEFT COLUMN: COZY PROFILE WIDGET ================= -->
+        <!-- STREAMING_CHUNK: Creating the interactive profile widget (Left Column)... -->
+        <section class="lg:col-span-4 bg-white/90 border-4 border-[#FFCAD4] rounded-[2.5rem] p-6 shadow-xl relative overflow-hidden flex flex-col justify-between">
+            <div class="absolute top-2 right-4 text-3xl opacity-20">🌸</div>
+            
+            <div class="space-y-6">
+                <!-- กรอบรูปถ่ายสติกเกอร์เก๋ๆ -->
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-1.5 bg-gradient-to-tr from-[#F4978E] to-[#FFCAD4] rounded-[2rem] opacity-30 blur-sm"></div>
+                        <div class="relative w-48 h-48 bg-white border-4 border-[#FFCAD4] p-2 rounded-[2rem] shadow-md">
+                            <img src="images/profile.jpg" alt="Natthida" class="w-full h-full object-cover rounded-[1.5rem]" onerror="this.src='https://placehold.co/400x400/ffe5ec/4a3e3d?text=Natthida'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- รายละเอียดสเตตัสจำลอง -->
+                <div class="text-center space-y-2">
+                    <span class="bg-[#FFCAD4]/40 text-[#F4978E] border border-[#FFCAD4] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">CREATIVE_STUDENT</span>
+                    <h2 class="text-2xl font-black text-[#4A3E3D] mt-1">ณัฐธิดา รัศมี</h2>
+                    <p class="text-xs font-semibold text-slate-400">Class : Portfolio 2026 // Active</p>
+                </div>
+
+                <!-- แถบค่าสถานะดุ๊กดิ๊กสุดน่ารัก (Interactive Progress) -->
+                <div class="space-y-3 bg-[#FFF5F6] p-4 rounded-2xl border border-[#FFCAD4]/40">
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-[10px] font-bold text-slate-500">
+                            <span>🧁 HAPPINESS LEVEL</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="w-full h-2 bg-[#FFCAD4]/30 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-[#F4978E] to-[#FFCAD4] w-full rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-[10px] font-bold text-slate-500">
+                            <span>🎨 CREATIVITY</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="w-full h-2 bg-[#FFCAD4]/30 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-[#F4978E] to-[#FFCAD4] w-[95%] rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-[10px] font-bold text-slate-500">
+                            <span>☕ COFFEE INTAKE</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-[#FFCAD4]/30 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-[#F4978E] to-[#FFCAD4] w-[80%] rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-dashed border-[#FFCAD4] flex justify-between items-center text-[9px] text-slate-400 font-bold tracking-widest">
+                <span>LV.99 COMPLETED</span>
+                <span class="text-[#F4978E]">NATTHIDA_WORLD 🌸</span>
+            </div>
+        </section>
+
+        <!-- ================= RIGHT COLUMN: INTERACTIVE FILE PLANNER ================= -->
+        <!-- STREAMING_CHUNK: Building the file folder structure and tab triggers... -->
+        <section class="lg:col-span-8 space-y-6">
+            
+            <!-- หูแฟ้มควบคุมระดับหัวข้อ (Tab Navigation Controls) -->
+            <nav class="flex flex-wrap gap-2 md:gap-3 border-b-4 border-[#FFCAD4] pb-0.5">
+                <button onclick="switchTab('about')" id="tab-about" class="tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-[#FFF5F6] text-[#F4978E] translate-y-[4px]">
+                    <i class="fa-solid fa-address-card mr-1"></i> Bio
+                </button>
+                <button onclick="switchTab('education')" id="tab-education" class="tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E]">
+                    <i class="fa-solid fa-graduation-cap mr-1"></i> Education
+                </button>
+                <button onclick="switchTab('portfolio')" id="tab-portfolio" class="tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E]">
+                    <i class="fa-solid fa-images mr-1"></i> Gallery
+                </button>
+                <button onclick="switchTab('contact')" id="tab-contact" class="tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E]">
+                    <i class="fa-solid fa-envelope mr-1"></i> Contact
+                </button>
             </nav>
-            <div class="bg-[#FFCAD4]/60 border border-[#FFB5A7] px-3.5 py-1 rounded-full font-bold text-[10px] text-[#4A3E3D] flex items-center gap-1">
-                <span>✦ COZY DAYS 🍓</span>
-            </div>
-        </header>
-    </div>
 
-
-    <!-- ================= HERO SECTION (หน้าแรก - ดีไซน์เด่นสะดุดตาเป็นระเบียบ) ================= -->
-    <!-- STREAMING_CHUNK: Crafting the aesthetic hero spotlight section... -->
-    <section class="min-h-screen flex items-center justify-center pt-28 pb-16 px-4 relative z-10" id="home">
-        <div class="max-w-4xl w-full grid md:grid-cols-12 gap-8 items-center">
-            
-            <div class="md:col-span-7 space-y-6 text-center md:text-left order-2 md:order-1">
-                <div class="inline-flex items-center gap-2 bg-[#FFCAD4]/40 text-[#F4978E] border border-[#FFCAD4] font-bold text-xs px-4 py-1.5 rounded-full shadow-sm">
-                    ✨ WELCOME TO MY SWEET PORTFOLIO
-                </div>
+            <!-- แผงบรรจุหน้าต่างแฟ้มเอกสาร (Tabbed Content Sheets) -->
+            <div class="bg-white/95 border-4 border-[#FFCAD4] rounded-b-[2.5rem] rounded-tr-[2.5rem] p-6 md:p-8 shadow-xl min-h-[460px] relative">
                 
-                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-none text-[#4A3E3D]">
-                    ณัฐธิดา รัศมี
-                </h1>
-                
-                <h2 class="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F4978E] to-[#FFCAD4] tracking-wide">
-                    Portfolio เพื่อการศึกษาต่อ
-                </h2>
-                
-                <div class="relative bg-white/70 backdrop-blur-md p-6 rounded-[2rem] border border-white/80 shadow-[0_15px_30px_rgba(244,151,142,0.08)] overflow-hidden">
-                    <div class="absolute left-0 top-0 w-1.5 h-full bg-[#FFCAD4]"></div>
-                    <p class="text-sm md:text-base text-[#4A3E3D]/80 font-medium leading-relaxed">
-                        เว้นข้อความไว้ให้กรอกเอง
-                    </p>
-                </div>
-                
-                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
-                    <a href="#portfolio" class="bg-[#F4978E] hover:bg-[#E07A5F] text-white font-bold text-xs tracking-widest uppercase px-6 py-4 rounded-full shadow-lg shadow-[#F4978E]/30 transition-all transform hover:-translate-y-0.5">
-                        My Portfolio 🌸
-                    </a>
-                    <a href="#contact" class="bg-white/90 hover:bg-white text-[#4A3E3D] font-bold text-xs tracking-widest uppercase px-6 py-4 rounded-full border border-[#FFCAD4]/60 shadow-md transition-all transform hover:-translate-y-0.5">
-                        Contact Me
-                    </a>
-                </div>
-            </div>
-
-            <!-- รูปโปรไฟล์ขอบมนและสติกเกอร์ตกแต่ง -->
-            <div class="md:col-span-5 flex justify-center order-1 md:order-2">
-                <div class="relative group">
-                    <div class="absolute -inset-2 bg-gradient-to-r from-[#F4978E] to-[#FFCAD4] rounded-[3rem] opacity-30 blur-lg animate-float-calm"></div>
-                    <div class="relative w-64 h-64 md:w-72 md:h-72 bg-white/95 border-4 border-[#FFCAD4] p-4 rounded-[3rem] shadow-2xl transition-all duration-300 transform group-hover:rotate-1 group-hover:scale-[1.01]">
-                        <img src="images/profile.jpg" alt="Natthida" class="w-full h-full object-cover rounded-[2.2rem] bg-slate-50" onerror="this.src='https://placehold.co/400x400/ffe5ec/4a3e3d?text=Natthida'">
-                        <span class="absolute -bottom-2 -right-2 text-3xl animate-float-calm">🦢</span>
+                <!-- 📁 SHEET 1: ABOUT & GOALS -->
+                <!-- STREAMING_CHUNK: Rendering the About Me and Goals content card... -->
+                <div id="content-about" class="tab-content space-y-6">
+                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-circle-user"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">ข้อมูลแนะนำตัว</h3>
                     </div>
-                </div>
-            </div>
 
-        </div>
-    </section>
-
-
-    <!-- ================= ABOUT ME & GOALS SECTION (จัดวางแบบ 2 หน้ากางออกสุดน่ารักเห็นทันที) ================= -->
-    <!-- STREAMING_CHUNK: Designing the Open Scrapbook About section... -->
-    <section class="py-20 px-4 max-w-5xl mx-auto relative z-10" id="about">
-        <div class="mb-14 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight inline-block bg-white border-4 border-[#FFCAD4] px-6 py-2.5 rounded-full shadow-[5px_5px_0px_0px_#FFCAD4] text-[#4A3E3D]">
-                🍰 MY DIARY & GOALS
-            </h2>
-        </div>
-
-        <!-- ตัวสมุดบันทึก Diary กางออก (2 หน้าซ้ายขวา) แสดงครบถ้วนไม่ต้องกดสลับหน้า -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 bg-white/50 border-4 border-[#FFCAD4] p-6 md:p-10 rounded-[3rem] shadow-[0_20px_45px_rgba(244,151,142,0.1)] relative">
-            
-            <!-- แกนกลางสปริงสมุดบันทึกพาสเทล -->
-            <div class="hidden md:flex absolute left-1/2 top-8 bottom-8 -translate-x-1/2 w-4 flex-col justify-around items-center pointer-events-none z-20">
-                <div class="w-4 h-4 bg-[#FFCAD4] rounded-full border-2 border-white shadow-sm"></div>
-                <div class="w-4 h-4 bg-[#FFCAD4] rounded-full border-2 border-white shadow-sm"></div>
-                <div class="w-4 h-4 bg-[#FFCAD4] rounded-full border-2 border-white shadow-sm"></div>
-                <div class="w-4 h-4 bg-[#FFCAD4] rounded-full border-2 border-white shadow-sm"></div>
-                <div class="w-4 h-4 bg-[#FFCAD4] rounded-full border-2 border-white shadow-sm"></div>
-            </div>
-
-            <!-- หน้าสมุดซ้าย: ประวัติส่วนตัว (ดีไซน์ประดับเทปวาชิพาสเทล) -->
-            <div class="bg-white border-2 border-[#FFCAD4]/60 p-6 rounded-[2rem] shadow-sm relative overflow-hidden flex flex-col justify-between">
-                <!-- สติกเกอร์เทปวาชิคาดหัวมุมซ้ายบน -->
-                <div class="absolute -top-1 -left-8 bg-gradient-to-r from-[#FFCAD4] to-[#F4978E] w-32 h-6 transform -rotate-12 border-b border-white opacity-85 z-10 flex items-center justify-center">
-                    <span class="text-[8px] font-bold text-white tracking-widest">✦ MY DECO ✦</span>
-                </div>
-
-                <div class="space-y-6 pt-4">
-                    <h3 class="text-lg font-black text-[#F4978E] flex items-center gap-2">
-                        <i class="fa-solid fa-cookie-bite text-sm"></i> ประวัติส่วนตัว
-                    </h3>
-                    
-                    <div class="space-y-4 text-sm font-semibold text-[#4A3E3D]/80">
-                        <div class="flex items-center gap-2 border-b border-[#FFF0F2] pb-2">
-                            <span class="text-rose-400">🎀</span> ชื่อ : <span class="text-[#4A3E3D]">ณัฐธิดา รัศมี</span>
-                        </div>
-                        <div class="flex items-center gap-2 border-b border-[#FFF0F2] pb-2">
-                            <span class="text-amber-400">🏫</span> โรงเรียน : <span class="text-[#4A3E3D]">__________________</span>
-                        </div>
-                        <div class="flex items-center gap-2 border-b border-[#FFF0F2] pb-2">
-                            <span class="text-sky-400">📐</span> แผนการเรียน : <span class="text-[#4A3E3D]">__________________</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-8 pt-4 border-t border-dashed border-[#FFF0F2] flex justify-between items-center text-[10px] text-slate-400 font-bold tracking-widest">
-                    <span>PAGE // 01</span>
-                    <span class="text-[#FFCAD4]">SWEET_MEMORIES 💖</span>
-                </div>
-            </div>
-
-            <!-- หน้าสมุดขวา: เป้าหมาย (ดีไซน์ Sticky Note แผ่นโพสต์อิทขอบย่น) -->
-            <div class="bg-amber-50/40 border-2 border-amber-200/50 p-6 rounded-[2rem] shadow-sm relative flex flex-col justify-between overflow-hidden">
-                <!-- คลิปหนีบกระดาษสีหวานตรงหัวด้านบน -->
-                <div class="absolute top-3 left-1/2 transform -translate-x-1/2 w-10 h-7 bg-[#FFCAD4] rounded-md border border-white shadow-sm flex items-center justify-center z-10">
-                    <div class="w-1.5 h-3 bg-white rounded-full"></div>
-                </div>
-
-                <div class="space-y-6 pt-6 text-center md:text-left">
-                    <h3 class="text-lg font-black text-[#F4978E] flex items-center gap-2 justify-center md:justify-start">
-                        <i class="fa-solid fa-wand-magic-sparkles text-sm"></i> เป้าหมายในอนาคต
-                    </h3>
-                    
-                    <!-- บล็อกพื้นที่เขียนเป้าหมายเลียนแบบกระดาษประเส้นเขียน -->
-                    <div class="space-y-2 text-sm font-semibold text-[#4A3E3D]/80 leading-loose min-h-[100px] bg-[linear-gradient(#FFF0F2_1px,transparent_1px)] bg-[size:100%_2.2rem] pt-1">
-                        <p>___________________________</p>
-                        <p>___________________________</p>
-                    </div>
-                </div>
-
-                <div class="mt-8 pt-4 border-t border-dashed border-[#FFF0F2]/30 flex justify-between items-center text-[10px] text-slate-400 font-bold tracking-widest">
-                    <span>PAGE // 02</span>
-                    <span class="text-rose-400/80">TARGET_READY_⚡</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ================= EDUCATION SECTION (ราวริบบิ้นแกว่งพวงกุญแจสุดน่ารัก) ================= -->
-    <!-- STREAMING_CHUNK: Creating the beautiful hanging ribbon timeline... -->
-    <section class="py-20 px-4 max-w-4xl mx-auto relative z-10" id="education">
-        <div class="mb-16 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight inline-block bg-white border-4 border-[#FFCAD4] px-6 py-2.5 rounded-full shadow-[5px_5px_0px_0px_#FFCAD4] text-[#4A3E3D]">
-                🧁 EDUCATION PATH
-            </h2>
-            <p class="text-[10px] text-[#F4978E] font-bold tracking-widest uppercase mt-4 animate-pulse">✦ MY PROGRESS GROWING UP ✦</p>
-        </div>
-
-        <!-- ราวแขวนพาสเทลตกแต่งโบว์ริบบิ้นชมพูหวาน -->
-        <div class="relative border-l-4 border-dashed border-[#FFCAD4] ml-6 md:ml-40 space-y-12">
-            
-            <!-- ราวระโยงริบบิ้น 1: ประถมศึกษา -->
-            <div class="relative pl-8 md:pl-12 group animate-swing-cute" style="animation-delay: 0s;">
-                <!-- ปมริบบิ้นโบว์สีชมพูนิ่มเชื่อมต่อ -->
-                <div class="absolute -left-[18px] -top-1 z-20 flex items-center justify-center">
-                    <span class="text-2xl">🎀</span>
-                </div>
-                
-                <!-- สติกเกอร์บอกระยะประถมศึกษา -->
-                <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
-                    <span class="text-[10px] bg-[#B5E2FA]/50 text-sky-500 font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#B5E2FA]/70">🌱 PRIMARY</span>
-                </div>
-
-                <!-- ตัวบอร์ดการ์ดห้อยแกว่ง -->
-                <div class="bg-white border-4 border-[#FFCAD4] p-5 rounded-[2rem] shadow-[0_12px_25px_rgba(244,151,142,0.1)] transition-all duration-300 transform group-hover:scale-[1.02] group-hover:border-[#F4978E] relative">
-                    <!-- ลวดลายริบบิ้นขอบบน -->
-                    <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-[#FFF0F2] rounded-full"></div>
-                    
-                    <h3 class="font-extrabold text-base text-[#4A3E3D] flex items-center gap-1.5">
-                        <span class="text-xs">👶</span> ประถมศึกษา
-                    </h3>
-                    <p class="text-sm text-slate-500 font-semibold mt-2">__________________</p>
-                </div>
-            </div>
-
-            <!-- ราวระโยงริบบิ้น 2: มัธยมศึกษาตอนต้น -->
-            <div class="relative pl-8 md:pl-12 group animate-swing-cute" style="animation-delay: -1.5s;">
-                <div class="absolute -left-[18px] -top-1 z-20 flex items-center justify-center">
-                    <span class="text-2xl">🎀</span>
-                </div>
-                
-                <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
-                    <span class="text-[10px] bg-[#FFD166]/40 text-amber-500 font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#FFD166]/50">🌿 MIDDLE</span>
-                </div>
-
-                <div class="bg-white border-4 border-[#FFCAD4] p-5 rounded-[2rem] shadow-[0_12px_25px_rgba(244,151,142,0.1)] transition-all duration-300 transform group-hover:scale-[1.02] group-hover:border-[#F4978E] relative">
-                    <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-[#FFF0F2] rounded-full"></div>
-                    
-                    <h3 class="font-extrabold text-base text-[#4A3E3D] flex items-center gap-1.5">
-                        <span class="text-xs">🎒</span> มัธยมต้น
-                    </h3>
-                    <p class="text-sm text-slate-500 font-semibold mt-2">__________________</p>
-                </div>
-            </div>
-
-            <!-- ราวระโยงริบบิ้น 3: มัธยมศึกษาตอนปลาย -->
-            <div class="relative pl-8 md:pl-12 group animate-swing-cute" style="animation-delay: -3s;">
-                <div class="absolute -left-[18px] -top-1 z-20 flex items-center justify-center">
-                    <span class="text-2xl">🎀</span>
-                </div>
-                
-                <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
-                    <span class="text-[10px] bg-[#FFCAD4]/50 text-[#F4978E] font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#FFCAD4]">🌸 HIGH_SCH</span>
-                </div>
-
-                <!-- การ์ดตัวเอกแต่งขอบชมพูนมนุ่มฟูเด่นเป็นพิเศษ -->
-                <div class="bg-[#FFF5F6] border-4 border-[#FFCAD4] p-5 rounded-[2.2rem] shadow-[0_15px_30px_rgba(244,151,142,0.15)] transition-all duration-300 transform group-hover:scale-[1.02] relative overflow-hidden">
-                    <span class="absolute top-2 right-4 text-sm animate-spin-slow">🌸</span>
-                    <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-[#FFF0F2] rounded-full"></div>
-                    
-                    <h3 class="font-extrabold text-base text-[#F4978E] flex items-center gap-1.5">
-                        <span class="text-xs">🎓</span> มัธยมปลาย
-                    </h3>
-                    <p class="text-sm text-slate-600 font-bold mt-2">__________________</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ================= PORTFOLIO GALLERY SECTION (แกลเลอรีการ์ดโพลารอยด์สุดเก๋ครบทั้ง 11 ชิ้น) ================= -->
-    <!-- STREAMING_CHUNK: Generating polaroid photo gallery grid with 11 pages... -->
-    <section class="py-20 px-4 max-w-6xl mx-auto relative z-10" id="portfolio">
-        <div class="mb-12 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight inline-block bg-white border-4 border-[#FFCAD4] px-6 py-2.5 rounded-full shadow-[5px_5px_0px_0px_#FFCAD4] text-[#4A3E3D]">
-                🎈 PORTFOLIO ALBUM
-            </h2>
-            <p class="text-[10px] text-[#F4978E] tracking-widest uppercase mt-4 animate-pulse">[ ✦ TAP IMAGES TO ZOOM AND EXPLORE ✦ ]</p>
-        </div>
-
-        <!-- กริดแบบการ์ดโพลารอยด์น่ารักๆ ตกแต่งขอบนูนเงาสติ๊กเกอร์พาสเทลครบ 11 ชิ้น -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
-            <script>
-                // วนลูปวาดกล่องผลงานทั้ง 11 หน้า ในรูปแบบของโพลารอยด์การ์ด
-                for (let i = 1; i <= 11; i++) {
-                    document.write(`
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-3 rounded-[1.5rem] shadow-sm hover:shadow-xl hover:shadow-pink-100 hover:border-[#F4978E] hover:-translate-y-2 transition-all duration-300 cursor-pointer relative" onclick="openLightbox('images/page${i}.jpg')">
-                            <!-- แปะโบว์สติ๊กเกอร์จิ๋วสุดน่ารักด้านบนการ์ดคละหน้า -->
-                            <div class="absolute -top-1.5 left-1/2 transform -translate-x-1/2 bg-[#FFCAD4]/80 text-[#4A3E3D] text-[8px] px-2 py-0.5 rounded-full font-bold border border-white shadow-sm z-10">✦ LOVELY</div>
-                            
-                            <div class="aspect-[3/4] bg-slate-50 rounded-xl overflow-hidden relative border border-slate-100 shadow-inner">
-                                <img src="images/page${i}.jpg" alt="Page ${i}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/300x400/ffe5ec/4a3e3d?text=Page+${i}'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-[#4A3E3D] font-bold text-[9px] bg-white px-3 py-1.5 rounded-full shadow-md uppercase"><i class="fa-solid fa-heart mr-0.5"></i> VIEW</span>
-                                </div>
-                            </div>
-                            <div class="mt-3.5 text-center font-bold text-[10px] text-slate-400 group-hover:text-[#F4978E] tracking-wider">
-                                PAGE_${i.toString().padStart(2, '0')}
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- รายละเอียดประวัติ -->
+                        <div class="bg-white border-2 border-[#FFCAD4]/60 p-5 rounded-[2rem] space-y-4 shadow-sm relative overflow-hidden">
+                            <div class="absolute top-2 right-4 text-slate-100"><i class="fa-solid fa-quote-right text-3xl"></i></div>
+                            <h4 class="font-extrabold text-[#F4978E] flex items-center gap-1.5"><span class="text-xs">🍬</span> ข้อมูลส่วนตัว</h4>
+                            <div class="space-y-3.5 text-sm font-semibold text-[#4A3E3D]/80">
+                                <p class="flex items-center gap-2 border-b border-[#FFF0F2] pb-1.5">🧁 ชื่อ : <span>ณัฐธิดา รัศมี</span></p>
+                                <p class="flex items-center gap-2 border-b border-[#FFF0F2] pb-1.5">🏫 โรงเรียน : <span>[ กรอกชื่อโรงเรียนที่นี่ ]</span></p>
+                                <p class="flex items-center gap-2 border-b border-[#FFF0F2] pb-1.5">📐 แผนการเรียน : <span>[ กรอกแผนการเรียนที่นี่ ]</span></p>
                             </div>
                         </div>
-                    `);
-                }
-            </script>
-        </div>
-    </section>
 
+                        <!-- บล็อกเขียนเป้าหมาย (Sticky Note Yellow Concept) -->
+                        <div class="bg-amber-50/50 border-2 border-amber-200/50 p-5 rounded-[2rem] space-y-4 shadow-sm relative">
+                            <div class="absolute top-2 right-4 text-amber-200"><i class="fa-solid fa-thumbtack text-lg"></i></div>
+                            <h4 class="font-extrabold text-amber-500 flex items-center gap-1.5"><span class="text-xs">🎯</span> เป้าหมายในการศึกษาต่อ</h4>
+                            <p class="text-sm font-semibold text-slate-600 leading-relaxed min-h-[80px] bg-[linear-gradient(#FFF0F2_1px,transparent_1px)] bg-[size:100%_2rem] pt-1">
+                                [ พิมพ์เป้าหมาย ความปรารถนา หรือปณิธานของคุณลงตรงช่องนี้ ]
+                            </p>
+                        </div>
+                    </div>
 
-    <!-- ================= CONTACT SECTION (กล่องซองจดหมายพาสเทลแสนน่ารัก) ================= -->
-    <!-- STREAMING_CHUNK: Designing the sweet pink contact cards grid... -->
-    <section class="py-20 px-4 max-w-4xl mx-auto relative z-10" id="contact">
-        <div class="mb-12 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight inline-block bg-white border-4 border-[#FFCAD4] px-6 py-2.5 rounded-full shadow-[5px_5px_0px_0px_#FFCAD4] text-[#4A3E3D]">
-                💌 SEND ME A CHERRY
-            </h2>
-        </div>
-
-        <div class="bg-white/60 border-4 border-[#FFCAD4] p-6 md:p-8 rounded-[2.5rem] shadow-xl grid grid-cols-1 sm:grid-cols-2 gap-4">
-            
-            <!-- Email -->
-            <div class="flex items-center gap-4 p-4 bg-white/80 rounded-2xl border border-[#FFCAD4]/60 hover:scale-[1.02] transition-all">
-                <div class="w-11 h-11 bg-[#FFCAD4]/30 text-[#F4978E] rounded-full flex items-center justify-center text-xl shadow-inner"><i class="fa-solid fa-envelope"></i></div>
-                <div class="overflow-hidden">
-                    <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">EMAIL</span>
-                    <span class="text-xs font-bold text-[#4A3E3D] block truncate">Email : __________________</span>
+                    <!-- แถบเขียนข้อความเกริ่นนำ -->
+                    <div class="bg-[#FFF5F6] border border-[#FFCAD4]/60 p-5 rounded-[1.8rem] text-sm font-semibold leading-relaxed text-slate-500 shadow-inner">
+                        <p>เว้นข้อความไว้ให้กรอกเอง (คุณสามารถใส่บทความแนะนำสั้นๆ ที่นี่ได้เพื่อเปิดโอกาสให้นักประเมินเข้าใจตัวตนของคุณณัฐธิดาได้อย่างเป็นระบบ)</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Facebook -->
-            <div class="flex items-center gap-4 p-4 bg-white/80 rounded-2xl border border-[#FFCAD4]/60 hover:scale-[1.02] transition-all">
-                <div class="w-11 h-11 bg-blue-100 text-blue-400 rounded-full flex items-center justify-center text-xl shadow-inner"><i class="fa-brands fa-facebook-f"></i></div>
-                <div class="overflow-hidden">
-                    <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">FACEBOOK</span>
-                    <span class="text-xs font-bold text-[#4A3E3D] block truncate">Facebook : __________________</span>
+                <!-- 📁 SHEET 2: EDUCATION TIMELINE -->
+                <!-- STREAMING_CHUNK: Designing the Education timeline card... -->
+                <div id="content-education" class="tab-content space-y-6 hidden">
+                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-school"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">ประวัติการศึกษา (Education Path)</h3>
+                    </div>
+
+                    <!-- ไทม์ไลน์โบว์ริบบิ้นแบบนิ่งๆ สวยงาม -->
+                    <div class="relative border-l-4 border-dashed border-[#FFCAD4] ml-6 md:ml-36 space-y-8 py-2">
+                        <!-- ม.ปลาย -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[16px] -top-1 z-20 text-2xl">🌸</span>
+                            <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
+                                <span class="text-[10px] bg-[#FFCAD4]/60 text-[#F4978E] font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#FFCAD4]">HIGH_SCH</span>
+                            </div>
+                            <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] shadow-sm">
+                                <h4 class="font-extrabold text-base text-[#F4978E]">ระดับมัธยมศึกษาตอนปลาย</h4>
+                                <p class="text-xs text-slate-500 font-semibold mt-1">[ ระบุชื่อโรงเรียน / ปีการศึกษา ]</p>
+                            </div>
+                        </div>
+
+                        <!-- ม.ต้น -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[16px] -top-1 z-20 text-2xl">🎀</span>
+                            <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
+                                <span class="text-[10px] bg-[#B5E2FA]/50 text-sky-500 font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#B5E2FA]/60">MIDDLE</span>
+                            </div>
+                            <div class="bg-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] shadow-sm">
+                                <h4 class="font-extrabold text-base text-[#4A3E3D]">ระดับมัธยมศึกษาตอนต้น</h4>
+                                <p class="text-xs text-slate-500 font-semibold mt-1">[ ระบุชื่อโรงเรียน / ปีการศึกษา ]</p>
+                            </div>
+                        </div>
+
+                        <!-- ประถม -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[16px] -top-1 z-20 text-2xl">🧸</span>
+                            <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
+                                <span class="text-[10px] bg-[#FFD166]/30 text-amber-500 font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#FFD166]/50">PRIMARY</span>
+                            </div>
+                            <div class="bg-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] shadow-sm">
+                                <h4 class="font-extrabold text-base text-[#4A3E3D]">ระดับประถมศึกษา</h4>
+                                <p class="text-xs text-slate-500 font-semibold mt-1">[ ระบุชื่อโรงเรียน / ปีการศึกษา ]</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Instagram -->
-            <div class="flex items-center gap-4 p-4 bg-white/80 rounded-2xl border border-[#FFCAD4]/60 hover:scale-[1.02] transition-all">
-                <div class="w-11 h-11 bg-pink-100 text-pink-400 rounded-full flex items-center justify-center text-xl shadow-inner"><i class="fa-brands fa-instagram"></i></div>
-                <div class="overflow-hidden">
-                    <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">INSTAGRAM</span>
-                    <span class="text-xs font-bold text-[#4A3E3D] block truncate">Instagram : __________________</span>
+                <!-- 📁 SHEET 3: PORTFOLIO ALBUM (โพลารอยด์แสดงครบถ้วน 11 หน้าเสถียรสูงสุด) -->
+                <!-- STREAMING_CHUNK: Generating the 11-page Polaroid album grid... -->
+                <div id="content-portfolio" class="tab-content space-y-6 hidden">
+                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-photo-film"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">แกลเลอรีรูปภาพผลงาน (11 หน้า)</h3>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto pr-2 pb-2">
+                        <script>
+                            for (let i = 1; i <= 11; i++) {
+                                document.write(`
+                                    <div class="group bg-white border border-[#FFCAD4] p-2.5 rounded-[1.2rem] shadow-sm hover:shadow-md hover:border-[#F4978E] transition-all cursor-pointer relative" onclick="openLightbox('images/page${i}.jpg')">
+                                        <div class="aspect-[3/4] bg-slate-50 rounded-lg overflow-hidden relative">
+                                            <img src="images/page${i}.jpg" alt="Portfolio Page ${i}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102" onerror="this.src='https://placehold.co/300x400/ffe5ec/4a3e3d?text=Page+${i}'">
+                                            <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                                <span class="text-xs font-bold bg-white text-[#4A3E3D] px-2.5 py-1 rounded-full shadow-md"><i class="fa-solid fa-expand-alt mr-1"></i> VIEW</span>
+                                            </div>
+                                        </div>
+                                        <p class="mt-2 text-center font-bold text-[9px] text-slate-400">PAGE_${i.toString().padStart(2, '0')}</p>
+                                    </div>
+                                `);
+                            }
+                        </script>
+                    </div>
                 </div>
-            </div>
 
-            <!-- GitHub -->
-            <div class="flex items-center gap-4 p-4 bg-white/80 rounded-2xl border border-[#FFCAD4]/60 hover:scale-[1.02] transition-all">
-                <div class="w-11 h-11 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center text-xl shadow-inner"><i class="fa-brands fa-github"></i></div>
-                <div class="overflow-hidden">
-                    <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">GITHUB</span>
-                    <span class="text-xs font-bold text-[#4A3E3D] block truncate">GitHub : __________________</span>
+                <!-- 📁 SHEET 4: CONTACT DESK -->
+                <!-- STREAMING_CHUNK: Developing the Contact envelope system... -->
+                <div id="content-contact" class="tab-content space-y-6 hidden">
+                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-paper-plane"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">ช่องทางการติดต่อ (Contact Channel)</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Email -->
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border border-[#FFCAD4]/60">
+                            <div class="w-10 h-10 bg-[#FFCAD4]/30 text-[#F4978E] rounded-full flex items-center justify-center text-lg"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="overflow-hidden">
+                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">EMAIL</span>
+                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">Email : __________________</span>
+                            </div>
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border border-[#FFCAD4]/60">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-400 rounded-full flex items-center justify-center text-lg"><i class="fa-brands fa-facebook-f"></i></div>
+                            <div class="overflow-hidden">
+                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">FACEBOOK</span>
+                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">Facebook : __________________</span>
+                            </div>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border border-[#FFCAD4]/60">
+                            <div class="w-10 h-10 bg-pink-100 text-pink-400 rounded-full flex items-center justify-center text-lg"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="overflow-hidden">
+                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">INSTAGRAM</span>
+                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">Instagram : __________________</span>
+                            </div>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border border-[#FFCAD4]/60">
+                            <div class="w-10 h-10 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center text-lg"><i class="fa-brands fa-github"></i></div>
+                            <div class="overflow-hidden">
+                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">GITHUB</span>
+                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">GitHub : __________________</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+        </section>
 
-        </div>
-    </section>
+    </main>
 
-
-    <!-- ================= LIGHTBOX POPUP SYSTEM (ระบบคลิกส่องขยายแบบเสถียร) ================= -->
-    <!-- STREAMING_CHUNK: Setting up the reliable lightbox photo expansion modal... -->
-    <div id="lightbox" class="fixed inset-0 bg-[#4A3E3D]/60 backdrop-blur-sm hidden z-[100] flex-col items-center justify-center p-4 transition-all duration-300 opacity-0">
+    <!-- ================= PREMIUM LIGHTBOX POPUP SYSTEM ================= -->
+    <!-- STREAMING_CHUNK: Integrating stable premium lightbox expansion component... -->
+    <div id="lightbox" class="fixed inset-0 bg-[#4A3E3D]/70 backdrop-blur-sm hidden z-[100] flex-col items-center justify-center p-4 transition-all duration-300 opacity-0">
         <button onclick="closeLightbox()" class="absolute top-6 right-6 text-[#4A3E3D] bg-white border-2 border-[#FFCAD4] text-xl w-10 h-10 flex items-center justify-center rounded-full shadow-xl hover:text-[#F4978E] transition-all">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        <div class="max-w-3xl max-h-[85vh] overflow-hidden rounded-[2rem] border-4 border-[#FFCAD4] bg-white p-2 shadow-2xl">
-            <img id="lightbox-img" class="w-full h-full object-contain max-h-[82vh] rounded-[1.5rem]" src="" alt="Expanded Cute Document">
+        <div class="max-w-3xl max-h-[85vh] overflow-hidden rounded-[2.5rem] border-4 border-[#FFCAD4] bg-white p-2 shadow-2xl">
+            <img id="lightbox-img" class="w-full h-full object-contain max-h-[82vh] rounded-[2rem]" src="" alt="Expanded Blueprint View">
         </div>
     </div>
 
-
     <!-- ================= FOOTER ================= -->
-    <footer class="bg-white/40 backdrop-blur-md text-slate-400 py-8 text-center text-[10px] tracking-widest border-t border-[#FFCAD4]/60 relative z-10">
-        © 2026 COZY PORTFOLIO // OPERATIONS_SYSTEM: SWEET_CHERRY_HUD. ALL RIGHTS RESERVED.
+    <footer class="bg-white/40 backdrop-blur-md text-slate-400 py-6 text-center text-[10px] tracking-widest border-t border-[#FFCAD4]/60 relative z-10">
+        © 2026 NATTHIDA COZY DESK SYSTEM. ALL RIGHTS RESERVED.
     </footer>
 
-
-    <!-- ================= JAVASCRIPT CONTROLLERS ================= -->
-    <!-- STREAMING_CHUNK: Implementing simple but solid lightbox open and close script handlers... -->
+    <!-- ================= JAVASCRIPT LOGIC CONTROLLERS ================= -->
+    <!-- STREAMING_CHUNK: Implementing Lightbox and Tab logic JS... -->
     <script>
-        // 1. จัดการแผงควบคุมหน้าต่างขยายภาพ (Lightbox System)
+        // 1. ฟังก์ชันสลับการแสดงผลแผ่นเอกสารแฟ้ม (Tab Switcher)
+        function switchTab(tabId) {
+            // ซ่อนทุกๆ Content Sheet
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // คืนค่าปุ่มกดทั้งหมดให้เป็นสถานะ Deactive
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => {
+                tab.className = "tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-white text-slate-400 hover:text-[#F4978E]";
+            });
+
+            // แสดงเฉพาะ Content Sheet ที่เลือก
+            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+
+            // ตกแต่งสไตล์ปุ่มที่กำลังเลือกอยู่
+            const activeTab = document.getElementById(`tab-${tabId}`);
+            activeTab.className = "tab-btn px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase transition-all border-2 border-b-0 border-[#FFCAD4] bg-[#FFF5F6] text-[#F4978E] translate-y-[4px]";
+        }
+
+        // 2. แผงควบคุมระบบ Lightbox ส่องรูปภาพขยายใหญ่
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
@@ -444,14 +399,14 @@
             document.body.classList.remove('no-scroll');
         }
 
-        // หากคลิกพื้นที่สีดำรอบนอกรูปภาพจะเป็นการปิดหน้าต่างทันที
+        // หากคลิกพื้นที่ด้านนอกรูปภาพจะปิดหน้าต่างทันที
         document.getElementById('lightbox').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeLightbox();
             }
         });
 
-        // เปิดโอกาสให้ปิดการตรวจภาพขยายผ่านปุ่ม Escape บนแป้นพิมพ์ได้
+        // สามารถกดปุ่ม Escape บนคีย์บอร์ดเพื่อปิดป๊อปอัปได้
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeLightbox();
