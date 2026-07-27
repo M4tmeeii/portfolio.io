@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natthida Ratsamee </title>
+    <title>Natthida Ratsamee - Portfolio</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome สำหรับชุดไอคอนและสัญลักษณ์ -->
+    <!-- FontAwesome สำหรับไอคอน -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -23,7 +23,7 @@
             background-color: #FFF2F4;
         }
 
-        /* 🌸 แอนิเมชันลอยเบาๆ แบบนิ่งสงบ */
+        /* 🌸 แอนิเมชันลอยเบาๆ */
         @keyframes gentle-swing {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-6px) rotate(0.5deg); }
@@ -32,7 +32,7 @@
             animation: gentle-swing 8s infinite ease-in-out;
         }
 
-        /* 🍮 แอนิเมชันปุ่มเด้งดึ๋งสไตล์เยลลี่ (Jelly Squish Animation) */
+        /* 🍮 แอนิเมชันปุ่มเด้งดึ๋งสไตล์เยลลี่ */
         @keyframes jelly-pop {
             0% { transform: scale(1, 1); }
             30% { transform: scale(1.1, 0.9); }
@@ -45,7 +45,7 @@
             animation: jelly-pop 0.5s ease-in-out;
         }
 
-        /* 🎀 ปุ่ม 3D สเตตัสปกติ (สัมผัสแห่งความนูนเด่นน่าคลิก) */
+        /* 🎀 ปุ่ม 3D สเตตัสปกติ */
         .btn-3d-control {
             position: relative;
             transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -53,7 +53,6 @@
             user-select: none;
         }
         
-        /* สเตตัสเมื่อ "ยังไม่ได้กดเลือก" (Inactive Tab) */
         .btn-inactive {
             background-color: #FFFFFF;
             border: 2px solid #FFCAD4;
@@ -72,7 +71,6 @@
             border-bottom-width: 2px;
         }
 
-        /* สเตตัสเมื่อ "ถูกกดเลือกแล้ว" (Active Tab ยุบตัวลงแนบสนิท) */
         .btn-active {
             background-color: #FFF5F6;
             border: 2px solid #F4978E;
@@ -82,7 +80,7 @@
             box-shadow: inset 0 2px 4px rgba(244,151,142,0.1);
         }
 
-        /* ✨ ปรับแต่ง Scrollbar สตรอว์เบอร์รีนม */
+        /* ✨ Scrollbar สตรอว์เบอร์รีนม */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -106,14 +104,14 @@
 
 <body class="text-[#4A3E3D] min-h-screen antialiased selection:bg-[#FFCAD4] selection:text-[#4A3E3D] overflow-x-hidden relative">
 
-    <!-- ☁️ แผ่นออร่าละมุนตาสามสีลอยนุ่มนวลด้านหลัง -->
+    <!-- ☁️ แผ่นออร่าละมุนตา -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div class="absolute top-[-10%] left-[-10%] w-[35rem] h-[35rem] bg-[#FFCAD4]/30 rounded-full blur-[100px] animate-swing-calm"></div>
         <div class="absolute bottom-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-[#F4978E]/15 rounded-full blur-[120px] animate-swing-calm" style="animation-delay: -3s;"></div>
         <div class="absolute top-[40%] right-[20%] w-[25rem] h-[25rem] bg-[#FFE5EC]/60 rounded-full blur-[80px] animate-swing-calm" style="animation-delay: -5s;"></div>
     </div>
 
-    <!-- ================= TOP HUD STATUS BAR (แถบรายงานสถานะสไตล์โฮมเพจแท็บเล็ต) ================= -->
+    <!-- ================= TOP HUD STATUS BAR ================= -->
     <div class="max-w-6xl mx-auto px-4 pt-6 relative z-10">
         <div class="bg-white/80 backdrop-blur-md border-2 border-[#FFCAD4] rounded-[1.5rem] px-6 py-3 flex justify-between items-center shadow-sm">
             <div class="text-xs md:text-sm font-bold tracking-wider flex items-center gap-2">
@@ -127,32 +125,33 @@
         </div>
     </div>
 
-    <!-- ================= MAIN COLLABORATIVE WORKSPACE ================= -->
+    <!-- ================= MAIN WORKSPACE ================= -->
     <main class="max-w-6xl mx-auto px-4 py-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- ================= LEFT COLUMN: COZY PROFILE WIDGET ================= -->
+        <!-- ================= LEFT COLUMN: PROFILE WIDGET ================= -->
         <section class="lg:col-span-4 bg-white/90 border-4 border-[#FFCAD4] rounded-[2.5rem] p-6 shadow-xl relative overflow-hidden flex flex-col justify-between">
             <div class="absolute top-2 right-4 text-3xl opacity-20">🌸</div>
             
             <div class="space-y-6">
-                <!-- กรอบรูปถ่ายสติกเกอร์เก๋ๆ -->
+                <!-- รูปโปรไฟล์ -->
                 <div class="flex justify-center">
                     <div class="relative">
                         <div class="absolute -inset-1.5 bg-gradient-to-tr from-[#F4978E] to-[#FFCAD4] rounded-[2rem] opacity-30 blur-sm"></div>
-                        <div class="relative w-48 h-84 bg-white border-4 border-[#FFCAD4] p-2 rounded-[2rem] shadow-md">
-                            <img src="images/profile.jpg" alt="Natthida" class="w-full h-full object-cover rounded-[1.5rem]" onerror="this.src='https://placehold.co/400x400/ffe5ec/4a3e3d?text=Natthida'">
+                        <div class="relative w-48 h-64 bg-white border-4 border-[#FFCAD4] p-2 rounded-[2rem] shadow-md">
+                            <!-- ใส่รูปโปรไฟล์ที่นี่ -->
+                            <img src="images/profile.jpg" alt="Natthida Profile" class="w-full h-full object-cover rounded-[1.5rem]" onerror="this.src='https://placehold.co/400x500/ffe5ec/4a3e3d?text=Profile+Image'">
                         </div>
                     </div>
                 </div>
 
-                <!-- รายละเอียดสเตตัสจำลอง -->
+                <!-- ข้อมูลสังเขป -->
                 <div class="text-center space-y-2">
-                    <span class="bg-[#FFCAD4]/40 text-[#F4978E] border border-[#FFCAD4] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">CREATIVE_STUDENT</span>
+                    <span class="bg-[#FFCAD4]/40 text-[#F4978E] border border-[#FFCAD4] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">STUDENT PORTFOLIO</span>
                     <h2 class="text-2xl font-black text-[#4A3E3D] mt-1">ณัฐธิดา รัศมี</h2>
-                    <p class="text-xs font-semibold text-slate-400">Class : Portfolio 2026 // Active</p>
+                    <p class="text-xs font-semibold text-slate-400">โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</p>
                 </div>
 
-                <!-- แถบค่าสถานะดุ๊กดิ๊กสุดน่ารัก (Interactive Progress) -->
+                <!-- แถบค่าสถานะ -->
                 <div class="space-y-3 bg-[#FFF5F6] p-4 rounded-2xl border border-[#FFCAD4]/40">
                     <div class="space-y-1">
                         <div class="flex justify-between text-[10px] font-bold text-slate-500">
@@ -174,7 +173,7 @@
                     </div>
                     <div class="space-y-1">
                         <div class="flex justify-between text-[10px] font-bold text-slate-500">
-                            <span>ALEVEL</span>
+                            <span>A-LEVEL</span>
                             <span>80%</span>
                         </div>
                         <div class="w-full h-2 bg-[#FFCAD4]/30 rounded-full overflow-hidden">
@@ -190,185 +189,280 @@
             </div>
         </section>
 
-        <!-- ================= RIGHT COLUMN: INTERACTIVE FILE PLANNER ================= -->
+        <!-- ================= RIGHT COLUMN: MAIN CONTENT (4 TABS) ================= -->
         <section class="lg:col-span-8 space-y-6">
             
-            <!-- หูแฟ้มควบคุมระดับหัวข้อ (Tab Navigation Controls with Satisfying 3D Tactile Buttons) -->
-            <nav class="flex flex-wrap gap-2 md:gap-4 border-b-4 border-[#FFCAD4] pb-0.5">
-                <button onclick="switchTab('about')" id="tab-about" class="tab-btn btn-3d-control btn-active jelly-hover flex items-center gap-1.5 px-6 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
-                    <i class="fa-solid fa-address-card text-sm"></i> Bio
+            <!-- 📌 แถบเมนูควบคุม (SOP / GPAX / กิจกรรม / เกียรติบัตร) -->
+            <nav class="flex flex-wrap gap-2 md:gap-3 border-b-4 border-[#FFCAD4] pb-0.5">
+                <button onclick="switchTab('sop')" id="tab-sop" class="tab-btn btn-3d-control btn-active jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-file-lines text-sm"></i> SOP
                 </button>
-                <button onclick="switchTab('education')" id="tab-education" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-6 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
-                    <i class="fa-solid fa-graduation-cap text-sm"></i> Education
+                <button onclick="switchTab('gpax')" id="tab-gpax" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-graduation-cap text-sm"></i> GPAX
                 </button>
-                <button onclick="switchTab('portfolio')" id="tab-portfolio" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-6 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
-                    <i class="fa-solid fa-images text-sm"></i> Gallery
+                <button onclick="switchTab('activities')" id="tab-activities" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-camera-retro text-sm"></i> รูปกิจกรรม
                 </button>
-                <button onclick="switchTab('contact')" id="tab-contact" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-6 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
-                    <i class="fa-solid fa-envelope text-sm"></i> Contact
+                <button onclick="switchTab('certificates')" id="tab-certificates" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-award text-sm"></i> เกียรติบัตร
                 </button>
             </nav>
 
-            <!-- แผงบรรจุหน้าต่างแฟ้มเอกสาร (Tabbed Content Sheets) -->
-            <div class="bg-white/95 border-4 border-[#FFCAD4] rounded-b-[2.5rem] rounded-tr-[2.5rem] p-6 md:p-8 shadow-xl min-h-[460px] relative">
+            <!-- แผงบรรจุเนื้อหาแต่ละแท็บ -->
+            <div class="bg-white/95 border-4 border-[#FFCAD4] rounded-b-[2.5rem] rounded-tr-[2.5rem] p-6 md:p-8 shadow-xl min-h-[480px] relative">
                 
-                <!-- 📁 SHEET 1: ABOUT & GOALS -->
-                <div id="content-about" class="tab-content space-y-6">
-                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
-                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-circle-user"></i></span>
-                        <h3 class="text-xl font-black text-[#4A3E3D]">ข้อมูลแนะนำตัว</h3>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- รายละเอียดประวัติ -->
-                        <div class="bg-white border-2 border-[#FFCAD4]/60 p-5 rounded-[2rem] space-y-4 shadow-sm relative overflow-hidden">
-                            <div class="absolute top-2 right-4 text-slate-100"><i class="fa-solid fa-quote-right text-3xl"></i></div>
-                            <h4 class="font-extrabold text-[#F4978E] flex items-center gap-1.5"><span class="text-xs">🍬</span> ข้อมูลส่วนตัว</h4>
-                            <div class="space-y-3.5 text-sm font-semibold text-[#4A3E3D]/80">
-                                <p class="flex items-center gap-2 border-b border-[#FFF0F2] pb-1.5">🧁 ชื่อ : <span>นางสาวณัฐธิดา รัศมี</span></p>
-                                <p class="flex items-center gap-2 border-b border-[#FFF0F2] pb-1.5">🏫 โรงเรียน : <span>กระทุ่มแบน "วิเศษสมุทคุณ"</span></p>
-                                <p class="flex items-center gap-2 border-b border-[#FFF0F2] pb-1.5">📐 แผนการเรียน : <span>คณิตศาสตร์ ภาษาอังกฤษ</span></p>  
-                                <p class="flex items-center gap-2 border-b border-[#FFF0F2] pb-1.5">💡 งานอดิเรก : <span> ฟังเพลง อ่านหนังสือ ฟังเรื่องราวทางประวัติศาสตร์</span></p>
-                            </div>
-                        </div>
-
-                        <!-- บล็อกเขียนเป้าหมาย (Sticky Note Yellow Concept) -->
-                        <div class="bg-amber-50/50 border-2 border-amber-200/50 p-5 rounded-[2rem] space-y-4 shadow-sm relative">
-                            <div class="absolute top-2 right-4 text-amber-200"><i class="fa-solid fa-thumbtack text-lg"></i></div>
-                            <h4 class="font-extrabold text-amber-500 flex items-center gap-1.5"><span class="text-xs">🎯</span> เป้าหมายในการศึกษาต่อ</h4>
-                            <p class="text-sm font-semibold text-slate-600 leading-relaxed min-h-[80px] bg-[linear-gradient(#FFF0F2_1px,transparent_1px)] bg-[size:100%_2rem] pt-1">
-                               ตั้งใจเรียน พัฒนาความรู้และทักษะ เพื่อศึกษาต่อในคณะที่ใฝ่ฝัน  
-มุ่งมั่นเรียนให้ดีที่สุด เพื่อเข้าศึกษาต่อในระดับมหาวิทยาลัย  
-พัฒนาตนเองทั้งด้านวิชาการและทักษะชีวิต เพื่อความสำเร็จในอนาคต  
-เรียนรู้และพัฒนาศักยภาพของตนเอง เพื่อประกอบอาชีพที่มั่นคง  
-ตั้งใจศึกษา หาความรู้ และนำความรู้ไปใช้ให้เกิดประโยชน์ต่อสังคม  
-                            </p>
+                <!-- 📄 TAB 1: SOP (Statement of Purpose) -->
+                <div id="content-sop" class="tab-content space-y-6">
+                    <div class="flex items-center justify-between border-b border-[#FFF0F2] pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-pen-nib"></i></span>
+                            <h3 class="text-xl font-black text-[#4A3E3D]">Statement of Purpose (เรียงความแสดงเจตจำนง)</h3>
                         </div>
                     </div>
 
-                    <!-- แถบเขียนข้อความเกริ่นนำ -->
-                    <div class="bg-[#FFF5F6] border border-[#FFCAD4]/60 p-5 rounded-[1.8rem] text-sm font-semibold leading-relaxed text-slate-500 shadow-inner">
-                        <p>ดิฉัน นางสาวณัฐธิดา เป็นผู้ที่มีความมุ่งมั่น รับผิดชอบ และพร้อมเรียนรู้สิ่งใหม่อยู่เสมอ เชื่อว่าการพัฒนาตนเองอย่างต่อเนื่องจะนำไปสู่ความสำเร็จในอนาคต จึงตั้งใจศึกษาหาความรู้ทั้งในและนอกห้องเรียน พร้อมเข้าร่วมกิจกรรมที่ช่วยเสริมสร้างทักษะและประสบการณ์ เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อและการประกอบวิชาชีพ โดยหวังว่าจะได้นำความรู้ ความสามารถ และคุณธรรมไปสร้างประโยชน์ให้กับสังคมต่อไป</p>
-                    </div>
-                </div>
-
-                <!-- 📁 SHEET 2: EDUCATION TIMELINE -->
-                <div id="content-education" class="tab-content space-y-6 hidden">
-                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
-                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-school"></i></span>
-                        <h3 class="text-xl font-black text-[#4A3E3D]">ประวัติการศึกษา (Education Path)</h3>
-                    </div>
-
-                    <!-- ไทม์ไลน์โบว์ริบบิ้นแบบนิ่งๆ สวยงาม -->
-                    <div class="relative border-l-4 border-dashed border-[#FFCAD4] ml-6 md:ml-36 space-y-8 py-2">
-                        <!-- ม.ปลาย -->
-                        <div class="relative pl-8 group">
-                            <span class="absolute -left-[16px] -top-1 z-20 text-2xl animate-bounce">🌸</span>
-                            <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
-                                <span class="text-[10px] bg-[#FFCAD4]/60 text-[#F4978E] font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#FFCAD4]">HIGH_SCH</span>
-                            </div>
-                            <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] shadow-sm">
-                                <h4 class="font-extrabold text-base text-[#F4978E]">ระดับมัธยมศึกษาตอนปลาย</h4>
-                                <p class="text-xs text-slate-500 font-semibold mt-1">โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</p>
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                        <!-- ข้อความ SOP -->
+                        <div class="md:col-span-8 bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-6 rounded-[2rem] space-y-4 shadow-sm relative">
+                            <div class="absolute top-3 right-4 text-[#F4978E]/30"><i class="fa-solid fa-quote-right text-4xl"></i></div>
+                            <h4 class="font-extrabold text-[#F4978E] flex items-center gap-1.5"><span class="text-xs">🎯</span> แรงบันดาลใจและเป้าหมายทางการศึกษา</h4>
+                            <div class="text-sm font-semibold leading-relaxed text-slate-600 space-y-3">
+                                <p>ดิฉัน นางสาวณัฐธิดา รัศมี มีความมุ่งมั่นและเป้าหมายอย่างชัดเจนในการเข้าศึกษาต่อในระดับอุดมศึกษา ดิฉันเชื่อมั่นว่าการเรียนรู้ไม่จำกัดอยู่เพียงในห้องเรียน แต่เป็นการพัฒนาทักษะชีวิต ความคิดสร้างสรรค์ และความพร้อมในการแก้ปัญหา</p>
+                                <p>ความสนใจและเป้าหมายของดิฉัน เกิดจากการศึกษาและทำกิจกรรมที่ส่งเสริมทักษะความคิดวิเคราะห์ และความมุ่งมั่นในการเรียนรู้สิ่งใหม่ๆ อยู่เสมอ จึงตั้งใจที่จะนำความรู้และประสบการณ์ทั้งหมดมาทุ่มเทให้กับการศึกษา เพื่อเติบโตเป็นผู้มีความเชี่ยวชาญและสร้างประโยชน์ต่อสังคมในอนาคต</p>
                             </div>
                         </div>
 
-                        <!-- ม.ต้น -->
-                        <div class="relative pl-8 group">
-                            <span class="absolute -left-[16px] -top-1 z-20 text-2xl">🎀</span>
-                            <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
-                                <span class="text-[10px] bg-[#B5E2FA]/50 text-sky-500 font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#B5E2FA]/60">MIDDLE</span>
-                            </div>
-                            <div class="bg-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] shadow-sm">
-                                <h4 class="font-extrabold text-base text-[#4A3E3D]">ระดับมัธยมศึกษาตอนต้น</h4>
-                                <p class="text-xs text-slate-500 font-semibold mt-1">โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</p>
-                            </div>
-                        </div>
-<!-- ประถม -->
-                        <div class="relative pl-8 group">
-                            <span class="absolute -left-[16px] -top-1 z-20 text-2xl">🧸</span>
-                            <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
-                                <span class="text-[10px] bg-[#FFD166]/30 text-amber-500 font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#FFD166]/50">PRIMARY</span>
-                            </div>
-                            <div class="bg-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] shadow-sm">
-                                <h4 class="font-extrabold text-base text-[#4A3E3D]">ระดับประถมศึกษา</h4>
-                                <p class="text-xs text-slate-500 font-semibold mt-1"> โรงเรียนสารสาสน์วิเทศบ้านแพ้ว</p>
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-
-                <!-- 📁 SHEET 3: PORTFOLIO ALBUM (โพลารอยด์แสดงครบถ้วน 11 หน้าพร้อมปุ่มโพลารอยด์น่ากดส่อง) -->
-                <div id="content-portfolio" class="tab-content space-y-6 hidden">
-                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
-                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-photo-film"></i></span>
-                        <h3 class="text-xl font-black text-[#4A3E3D]">แกลเลอรีรูปภาพผลงาน (11 หน้า)</h3>
-                    </div>
-
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto pr-2 pb-2">
-                        <script>
-                            for (let i = 1; i <= 11; i++) {
-                                document.write(`
-                                    <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.2rem] shadow-sm hover:shadow-md hover:border-[#F4978E] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer relative" onclick="openLightbox('images/page${i}.jpg')">
-                                        <div class="aspect-[3/4] bg-slate-50 rounded-lg overflow-hidden relative border border-slate-100">
-                                            <img src="images/page${i}.jpg" alt="Portfolio Page ${i}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/300x400/ffe5ec/4a3e3d?text=Page+${i}'">
-                                            <!-- ปุ่มสแกนขยายใหญ่สไตล์ลูกกวาดน่ากด -->
-                                            <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                                <span class="jelly-hover text-xs font-bold bg-[#F4978E] text-white border-2 border-white px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1 transform scale-90 group-hover:scale-100 transition-all duration-200"><i class="fa-solid fa-magnifying-glass-plus"></i> VIEW</span>
-                                            </div>
-                                        </div>
-                                        <p class="mt-2 text-center font-bold text-[9px] text-slate-400 group-hover:text-[#F4978E] transition-colors">PAGE_${i.toString().padStart(2, '0')}</p>
+                        <!-- พื้นที่สำหรับใส่รูป SOP หรือ รูปประกอบแรงบันดาลใจ -->
+                        <div class="md:col-span-4 space-y-2">
+                            <div class="group bg-white border-2 border-[#FFCAD4] p-2 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] transition-all cursor-pointer relative" onclick="openLightbox('images/sop-doc.jpg')">
+                                <div class="aspect-[3/4] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
+                                    <!-- 🖼️ ใส่รูปไฟล์ SOP หรือรูปประกอบตรงนี้ -->
+                                    <img src="images/sop-doc.jpg" alt="SOP Document" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/300x400/ffe5ec/4a3e3d?text=SOP+Document+Image'">
+                                    <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
                                     </div>
-                                `);
-                            }
-                        </script>
+                                </div>
+                            </div>
+                            <p class="text-center font-bold text-[10px] text-slate-400">รูปเอกสาร SOP / แรงบันดาลใจ</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 📁 SHEET 4: CONTACT DESK -->
-                <div id="content-contact" class="tab-content space-y-6 hidden">
+                <!-- 📊 TAB 2: GPAX (ผลการเรียนเฉลี่ยสะสม) -->
+                <div id="content-gpax" class="tab-content space-y-6 hidden">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
-                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-paper-plane"></i></span>
-                        <h3 class="text-xl font-black text-[#4A3E3D]">ช่องทางการติดต่อ (Contact Channel)</h3>
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-chart-line"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">ผลการเรียนเฉลี่ยสะสม (GPAX)</h3>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <!-- Email -->
-                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4] hover:border-[#F4978E] transition-all hover:scale-[1.02] hover:-translate-y-0.5 shadow-sm">
-                            <div class="w-10 h-10 bg-[#FFCAD4]/30 text-[#F4978E] rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-solid fa-envelope animate-pulse"></i></div>
-                            <div class="overflow-hidden">
-                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">EMAIL</span>
-                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">Email : natthida1937@gmail.com</span>
+                    <!-- แสดงเกรดเฉลี่ยเด่นๆ -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] text-center shadow-sm">
+                            <span class="text-xs font-bold text-slate-400 block mb-1">GPAX รวม 5 เทอม</span>
+                            <span class="text-3xl font-black text-[#F4978E]">3.XX</span> <!-- แก้ไขเกรดตรงนี้ -->
+                        </div>
+                        <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] text-center shadow-sm">
+                            <span class="text-xs font-bold text-slate-400 block mb-1">แผนการเรียน</span>
+                            <span class="text-base font-black text-[#4A3E3D]">คณิต-อังกฤษ</span>
+                        </div>
+                        <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] text-center shadow-sm">
+                            <span class="text-xs font-bold text-slate-400 block mb-1">สถานะสถานศึกษา</span>
+                            <span class="text-base font-black text-emerald-500">กำลังศึกษาอยู่</span>
+                        </div>
+                    </div>
+
+                    <!-- พื้นที่ใส่รูปภาพใบระเบียนแสดงผลการเรียน (ปพ.1 / Transcript) -->
+                    <div class="space-y-3 pt-2">
+                        <h4 class="font-extrabold text-xs text-slate-400 uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-file-invoice"></i> เอกสารแสดงผลการเรียน (Transcript / ปพ.1)</h4>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- รูปใบเกรด หน้า 1 -->
+                            <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/gpax-page1.jpg')">
+                                <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
+                                    <!-- 🖼️ ใส่รูปใบเกรดหน้า 1 ที่นี่ -->
+                                    <img src="images/gpax-page1.jpg" alt="Transcript Page 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Transcript+Page+1'">
+                                    <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเอกสาร</span>
+                                    </div>
+                                </div>
+                                <p class="mt-2 text-center font-bold text-xs text-slate-500">ใบรวบรวมผลการศึกษา (หน้า 1)</p>
+                            </div>
+
+                            <!-- รูปใบเกรด หน้า 2 (ถ้ามี) -->
+                            <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/gpax-page2.jpg')">
+                                <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
+                                    <!-- 🖼️ ใส่รูปใบเกรดหน้า 2 ที่นี่ -->
+                                    <img src="images/gpax-page2.jpg" alt="Transcript Page 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Transcript+Page+2'">
+                                    <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเอกสาร</span>
+                                    </div>
+                                </div>
+                                <p class="mt-2 text-center font-bold text-xs text-slate-500">ใบรวบรวมผลการศึกษา (หน้า 2)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 📸 TAB 3: รูปกิจกรรม (Activities Gallery) -->
+                <div id="content-activities" class="tab-content space-y-6 hidden">
+                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-images"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">ภาพกิจกรรมที่เข้าร่วม (Activities)</h3>
+                    </div>
+
+                    <!-- รายการการ์ดกิจกรรม พร้อมใส่รูปและคำอธิบาย -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto pr-2 pb-2">
+                        
+                        <!-- กิจกรรมที่ 1 -->
+                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity1.jpg')">
+                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
+                                <!-- 🖼️ รูปกิจกรรม 1 -->
+                                <img src="images/activity1.jpg" alt="Activity 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+1'">
+                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
+                                </div>
+                            </div>
+                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 1</h5>
+                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
+                        </div>
+
+                        <!-- กิจกรรมที่ 2 -->
+                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity2.jpg')">
+                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
+                                <!-- 🖼️ รูปกิจกรรม 2 -->
+                                <img src="images/activity2.jpg" alt="Activity 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+2'">
+                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
+                                </div>
+                            </div>
+                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 2</h5>
+                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
+                        </div>
+
+                        <!-- กิจกรรมที่ 3 -->
+                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity3.jpg')">
+                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
+                                <!-- 🖼️ รูปกิจกรรม 3 -->
+                                <img src="images/activity3.jpg" alt="Activity 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+3'">
+                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
+                                </div>
+                            </div>
+                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 3</h5>
+                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
+                        </div>
+
+                        <!-- กิจกรรมที่ 4 -->
+                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity4.jpg')">
+                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
+                                <!-- 🖼️ รูปกิจกรรม 4 -->
+                                <img src="images/activity4.jpg" alt="Activity 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+4'">
+                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
+                                </div>
+                            </div>
+                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 4</h5>
+                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
+                        </div>
+
+                        <!-- กิจกรรมที่ 5 -->
+                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity5.jpg')">
+                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
+                                <!-- 🖼️ รูปกิจกรรม 5 -->
+                                <img src="images/activity5.jpg" alt="Activity 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+5'">
+                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
+                                </div>
+                            </div>
+                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 5</h5>
+                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
+                        </div>
+
+                        <!-- กิจกรรมที่ 6 -->
+                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity6.jpg')">
+                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
+                                <!-- 🖼️ รูปกิจกรรม 6 -->
+                                <img src="images/activity6.jpg" alt="Activity 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+6'">
+                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
+                                </div>
+                            </div>
+                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 6</h5>
+                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 🏆 TAB 4: เกียรติบัตร (Certificates) -->
+                <div id="content-certificates" class="tab-content space-y-6 hidden">
+                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-award"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">เกียรติบัตรและผลงานรางวัล (Certificates)</h3>
+                    </div>
+
+                    <!-- รายการการ์ดเกียรติบัตร -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[420px] overflow-y-auto pr-2 pb-2">
+                        
+                        <!-- เกียรติบัตร 1 -->
+                        <div class="group bg-white border-2 border-[#FFCAD4] p-3 rounded-[1.8rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/cert1.jpg')">
+                            <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
+                                <!-- 🖼️ รูปเกียรติบัตร 1 -->
+                                <img src="images/cert1.jpg" alt="Certificate 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Certificate+1'">
+                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเกียรติบัตร</span>
+                                </div>
+                            </div>
+                            <div class="mt-2.5 space-y-0.5">
+                                <h5 class="font-extrabold text-xs text-[#4A3E3D] truncate">รางวัล / เกียรติบัตรที่ 1</h5>
+                                <p class="text-[11px] font-semibold text-[#F4978E]">หน่วยงานผู้มอบรางวัล / โรงเรียน</p>
                             </div>
                         </div>
 
-                        <!-- Facebook -->
-                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4] hover:border-[#F4978E] transition-all hover:scale-[1.02] hover:-translate-y-0.5 shadow-sm">
-                            <div class="w-10 h-10 bg-blue-100 text-blue-400 rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-brands fa-facebook-f"></i></div>
-                            <div class="overflow-hidden">
-                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">FACEBOOK</span>
-                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">Facebook :  Natthida Ratsamee</span>
+                        <!-- เกียรติบัตร 2 -->
+                        <div class="group bg-white border-2 border-[#FFCAD4] p-3 rounded-[1.8rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/cert2.jpg')">
+                            <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
+                                <!-- 🖼️ รูปเกียรติบัตร 2 -->
+                                <img src="images/cert2.jpg" alt="Certificate 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Certificate+2'">
+                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเกียรติบัตร</span>
+                                </div>
+                            </div>
+                            <div class="mt-2.5 space-y-0.5">
+                                <h5 class="font-extrabold text-xs text-[#4A3E3D] truncate">รางวัล / เกียรติบัตรที่ 2</h5>
+                                <p class="text-[11px] font-semibold text-[#F4978E]">หน่วยงานผู้มอบรางวัล / โรงเรียน</p>
                             </div>
                         </div>
 
-                        <!-- Instagram -->
-                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4] hover:border-[#F4978E] transition-all hover:scale-[1.02] hover:-translate-y-0.5 shadow-sm">
-                            <div class="w-10 h-10 bg-pink-100 text-pink-400 rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-brands fa-instagram"></i></div>
-                            <div class="overflow-hidden">
-                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">INSTAGRAM</span>
-                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">Instagram : m4tmeeii</span>
+                        <!-- เกียรติบัตร 3 -->
+                        <div class="group bg-white border-2 border-[#FFCAD4] p-3 rounded-[1.8rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/cert3.jpg')">
+                            <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
+                                <!-- 🖼️ รูปเกียรติบัตร 3 -->
+                                <img src="images/cert3.jpg" alt="Certificate 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Certificate+3'">
+                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเกียรติบัตร</span>
+                                </div>
+                            </div>
+                            <div class="mt-2.5 space-y-0.5">
+                                <h5 class="font-extrabold text-xs text-[#4A3E3D] truncate">รางวัล / เกียรติบัตรที่ 3</h5>
+                                <p class="text-[11px] font-semibold text-[#F4978E]">หน่วยงานผู้มอบรางวัล / โรงเรียน</p>
                             </div>
                         </div>
 
-                        <!-- GitHub -->
-                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4] hover:border-[#F4978E] transition-all hover:scale-[1.02] hover:-translate-y-0.5 shadow-sm">
-                            <div class="w-10 h-10 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-brands fa-github"></i></div>
-                            <div class="overflow-hidden">
-                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">GITHUB</span>
-                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">GitHub : M4tmeeii</span>
+                        <!-- เกียรติบัตร 4 -->
+                        <div class="group bg-white border-2 border-[#FFCAD4] p-3 rounded-[1.8rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/cert4.jpg')">
+                            <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
+                                <!-- 🖼️ รูปเกียรติบัตร 4 -->
+                                <img src="images/cert4.jpg" alt="Certificate 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Certificate+4'">
+                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเกียรติบัตร</span>
+                                </div>
+                            </div>
+                            <div class="mt-2.5 space-y-0.5">
+                                <h5 class="font-extrabold text-xs text-[#4A3E3D] truncate">รางวัล / เกียรติบัตรที่ 4</h5>
+                                <p class="text-[11px] font-semibold text-[#F4978E]">หน่วยงานผู้มอบรางวัล / โรงเรียน</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -377,14 +471,13 @@
 
     </main>
 
-    <!-- ================= PREMIUM LIGHTBOX POPUP SYSTEM ================= -->
+    <!-- ================= LIGHTBOX POPUP SYSTEM ================= -->
     <div id="lightbox" class="fixed inset-0 bg-[#4A3E3D]/70 backdrop-blur-sm hidden z-[100] flex-col items-center justify-center p-4 transition-all duration-300 opacity-0">
-        <!-- ปุ่มปิดกล่องขยายสไตล์วุ้นเด้งเร้าใจ น่ากดสิบเท่า -->
-        <button onclick="closeLightbox()" class="jelly-hover absolute top-6 right-6 text-[#4A3E3D] bg-white border-4 border-[#FFCAD4] text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-xl hover:text-[#F4978E] hover:border-[#F4978E] hover:-translate-y-1 active:translate-y-0 transition-all">
+        <button onclick="closeLightbox()" class="jelly-hover absolute top-6 right-6 text-[#4A3E3D] bg-white border-4 border-[#FFCAD4] text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-xl hover:text-[#F4978E] hover:border-[#F4978E] transition-all">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        <div class="max-w-3xl max-h-[85vh] overflow-hidden rounded-[2.5rem] border-4 border-[#FFCAD4] bg-white p-2 shadow-2xl animate-swing-calm">
-            <img id="lightbox-img" class="w-full h-full object-contain max-h-[82vh] rounded-[2rem]" src="" alt="Expanded Blueprint View">
+        <div class="max-w-4xl max-h-[85vh] overflow-hidden rounded-[2.5rem] border-4 border-[#FFCAD4] bg-white p-2 shadow-2xl animate-swing-calm">
+            <img id="lightbox-img" class="w-full h-full object-contain max-h-[82vh] rounded-[2rem]" src="" alt="Expanded View">
         </div>
     </div>
 
@@ -393,33 +486,33 @@
         © 2026 NATTHIDA COZY DESK SYSTEM. ALL RIGHTS RESERVED.
     </footer>
 
-    <!-- ================= JAVASCRIPT LOGIC CONTROLLERS ================= -->
+    <!-- ================= JAVASCRIPT ================= -->
     <script>
-        // 1. ฟังก์ชันสลับการแสดงผลแผ่นเอกสารแฟ้ม (Tab Switcher with 3D tactile animation class toggling)
+        // 1. ฟังก์ชันสลับแท็บ (SOP, GPAX, Activities, Certificates)
         function switchTab(tabId) {
-            // ซ่อนทุกๆ Content Sheet
+            // ซ่อนทุกๆ Content
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => {
                 content.classList.add('hidden');
             });
 
-            // คืนค่าปุ่มกดทั้งหมดให้กลับไปเป็นสถานะลอยเด้ง (Inactive 3D Tab styling)
+            // คืนค่าปุ่มกดทั้งหมดเป็น Inactive
             const tabs = document.querySelectorAll('.tab-btn');
             tabs.forEach(tab => {
                 tab.classList.remove('btn-active');
                 tab.classList.add('btn-inactive');
             });
 
-            // แสดงเฉพาะ Content Sheet ที่เลือก
+            // แสดง Content ที่เลือก
             document.getElementById(`content-${tabId}`).classList.remove('hidden');
 
-            // เปลี่ยนปุ่มที่กดเลือกให้ยุบตัวลงไปสนิทแบบสวยงามและสมจริง (Active 3D Tab styling)
+            // เปลี่ยนปุ่มที่เลือกเป็น Active
             const activeTab = document.getElementById(`tab-${tabId}`);
             activeTab.classList.remove('btn-inactive');
             activeTab.classList.add('btn-active');
         }
 
-        // 2. แผงควบคุมระบบ Lightbox ส่องรูปภาพขยายใหญ่
+        // 2. ระบบ Lightbox ดูรูปขยายใหญ่
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
@@ -447,14 +540,12 @@
             document.body.classList.remove('no-scroll');
         }
 
-        // หากคลิกพื้นที่ด้านนอกรูปภาพจะปิดหน้าต่างทันที
         document.getElementById('lightbox').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeLightbox();
             }
         });
 
-        // สามารถกดปุ่ม Escape บนคีย์บอร์ดเพื่อปิดป๊อปอัปได้
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeLightbox();
