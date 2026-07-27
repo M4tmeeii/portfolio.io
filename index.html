@@ -128,18 +128,21 @@
     <!-- ================= MAIN WORKSPACE ================= -->
     <main class="max-w-6xl mx-auto px-4 py-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- ================= LEFT COLUMN: PROFILE WIDGET ================= -->
+        <!-- ================= LEFT COLUMN: PROFILE WIDGET (ปก 1) ================= -->
         <section class="lg:col-span-4 bg-white/90 border-4 border-[#FFCAD4] rounded-[2.5rem] p-6 shadow-xl relative overflow-hidden flex flex-col justify-between">
             <div class="absolute top-2 right-4 text-3xl opacity-20">🌸</div>
             
             <div class="space-y-6">
-                <!-- รูปโปรไฟล์ -->
+                <!-- รูปปก (1.jpg) -->
                 <div class="flex justify-center">
-                    <div class="relative">
+                    <div class="relative cursor-pointer group" onclick="openLightbox('images/1.jpg')">
                         <div class="absolute -inset-1.5 bg-gradient-to-tr from-[#F4978E] to-[#FFCAD4] rounded-[2rem] opacity-30 blur-sm"></div>
-                        <div class="relative w-48 h-64 bg-white border-4 border-[#FFCAD4] p-2 rounded-[2rem] shadow-md">
-                            <!-- ใส่รูปโปรไฟล์ที่นี่ -->
-                            <img src="images/profile.jpg" alt="Natthida Profile" class="w-full h-full object-cover rounded-[1.5rem]" onerror="this.src='https://placehold.co/400x500/ffe5ec/4a3e3d?text=Profile+Image'">
+                        <div class="relative w-48 h-64 bg-white border-4 border-[#FFCAD4] p-2 rounded-[2rem] shadow-md overflow-hidden">
+                            <!-- 🖼️ รูปปก 1.jpg -->
+                            <img src="images/1.jpg" alt="ปก Portfolio" class="w-full h-full object-cover rounded-[1.5rem] group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x500/ffe5ec/4a3e3d?text=1'">
+                            <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-[1.8rem]">
+                                <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายปก</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,10 +192,10 @@
             </div>
         </section>
 
-        <!-- ================= RIGHT COLUMN: MAIN CONTENT (4 TABS) ================= -->
+        <!-- ================= RIGHT COLUMN: MAIN CONTENT ================= -->
         <section class="lg:col-span-8 space-y-6">
             
-            <!-- 📌 แถบเมนูควบคุม (SOP / GPAX / กิจกรรม / เกียรติบัตร) -->
+            <!-- 📌 แถบเมนูควบคุม -->
             <nav class="flex flex-wrap gap-2 md:gap-3 border-b-4 border-[#FFCAD4] pb-0.5">
                 <button onclick="switchTab('sop')" id="tab-sop" class="tab-btn btn-3d-control btn-active jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
                     <i class="fa-solid fa-file-lines text-sm"></i> SOP
@@ -211,7 +214,7 @@
             <!-- แผงบรรจุเนื้อหาแต่ละแท็บ -->
             <div class="bg-white/95 border-4 border-[#FFCAD4] rounded-b-[2.5rem] rounded-tr-[2.5rem] p-6 md:p-8 shadow-xl min-h-[480px] relative">
                 
-                <!-- 📄 TAB 1: SOP (Statement of Purpose) -->
+                <!-- 📄 TAB 1: SOP (รูปที่ 2) -->
                 <div id="content-sop" class="tab-content space-y-6">
                     <div class="flex items-center justify-between border-b border-[#FFF0F2] pb-4">
                         <div class="flex items-center gap-3">
@@ -222,7 +225,7 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
                         <!-- ข้อความ SOP -->
-                        <div class="md:col-span-8 bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-6 rounded-[2rem] space-y-4 shadow-sm relative">
+                        <div class="md:col-span-7 bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-6 rounded-[2rem] space-y-4 shadow-sm relative">
                             <div class="absolute top-3 right-4 text-[#F4978E]/30"><i class="fa-solid fa-quote-right text-4xl"></i></div>
                             <h4 class="font-extrabold text-[#F4978E] flex items-center gap-1.5"><span class="text-xs">🎯</span> แรงบันดาลใจและเป้าหมายทางการศึกษา</h4>
                             <div class="text-sm font-semibold leading-relaxed text-slate-600 space-y-3">
@@ -231,38 +234,38 @@
                             </div>
                         </div>
 
-                        <!-- พื้นที่สำหรับใส่รูป SOP หรือ รูปประกอบแรงบันดาลใจ -->
-                        <div class="md:col-span-4 space-y-2">
-                            <div class="group bg-white border-2 border-[#FFCAD4] p-2 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] transition-all cursor-pointer relative" onclick="openLightbox('images/sop-doc.jpg')">
+                        <!-- เอกสาร SOP (2.jpg) -->
+                        <div class="md:col-span-5 space-y-2">
+                            <div class="group bg-white border-2 border-[#FFCAD4] p-2 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] transition-all cursor-pointer relative" onclick="openLightbox('images/2.jpg')">
                                 <div class="aspect-[3/4] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
-                                    <!-- 🖼️ ใส่รูปไฟล์ SOP หรือรูปประกอบตรงนี้ -->
-                                    <img src="images/sop-doc.jpg" alt="SOP Document" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/300x400/ffe5ec/4a3e3d?text=SOP+Document+Image'">
+                                    <!-- 🖼️ รูป SOP (2.jpg) -->
+                                    <img src="images/2.jpg" alt="SOP Document" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/300x400/ffe5ec/4a3e3d?text=2'">
                                     <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                        <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
+                                        <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายเอกสาร</span>
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-center font-bold text-[10px] text-slate-400">รูปเอกสาร SOP / แรงบันดาลใจ</p>
+                            <p class="text-center font-bold text-[10px] text-slate-400">เอกสาร SOP</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- 📊 TAB 2: GPAX (ผลการเรียนเฉลี่ยสะสม) -->
+                <!-- 📊 TAB 2: GPAX (รูปที่ 3 - 4) -->
                 <div id="content-gpax" class="tab-content space-y-6 hidden">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
                         <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-chart-line"></i></span>
                         <h3 class="text-xl font-black text-[#4A3E3D]">ผลการเรียนเฉลี่ยสะสม (GPAX)</h3>
                     </div>
 
-                    <!-- แสดงเกรดเฉลี่ยเด่นๆ -->
+                    <!-- แสดงเกรดเฉลี่ย -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] text-center shadow-sm">
-                            <span class="text-xs font-bold text-slate-400 block mb-1">GPAX รวม 5 เทอม</span>
-                            <span class="text-3xl font-black text-[#F4978E]">3.XX</span> <!-- แก้ไขเกรดตรงนี้ -->
-                        </div>
                         <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] text-center shadow-sm">
                             <span class="text-xs font-bold text-slate-400 block mb-1">แผนการเรียน</span>
                             <span class="text-base font-black text-[#4A3E3D]">คณิต-อังกฤษ</span>
+                        </div>
+                        <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] text-center shadow-sm">
+                            <span class="text-xs font-bold text-slate-400 block mb-1">โรงเรียน</span>
+                            <span class="text-xs font-black text-[#F4978E]">กระทุ่มแบน "วิเศษสมุทคุณ"</span>
                         </div>
                         <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] text-center shadow-sm">
                             <span class="text-xs font-bold text-slate-400 block mb-1">สถานะสถานศึกษา</span>
@@ -270,198 +273,96 @@
                         </div>
                     </div>
 
-                    <!-- พื้นที่ใส่รูปภาพใบระเบียนแสดงผลการเรียน (ปพ.1 / Transcript) -->
+                    <!-- ใบระเบียนแสดงผลการเรียน (3.jpg และ 4.jpg) -->
                     <div class="space-y-3 pt-2">
                         <h4 class="font-extrabold text-xs text-slate-400 uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-file-invoice"></i> เอกสารแสดงผลการเรียน (Transcript / ปพ.1)</h4>
                         
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <!-- รูปใบเกรด หน้า 1 -->
-                            <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/gpax-page1.jpg')">
+                            <!-- รูปที่ 3 -->
+                            <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/3.jpg')">
                                 <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
-                                    <!-- 🖼️ ใส่รูปใบเกรดหน้า 1 ที่นี่ -->
-                                    <img src="images/gpax-page1.jpg" alt="Transcript Page 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Transcript+Page+1'">
+                                    <!-- 🖼️ รูป 3.jpg -->
+                                    <img src="images/3.jpg" alt="GPAX 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=3'">
                                     <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                         <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเอกสาร</span>
                                     </div>
                                 </div>
-                                <p class="mt-2 text-center font-bold text-xs text-slate-500">ใบรวบรวมผลการศึกษา (หน้า 1)</p>
+                                <p class="mt-2 text-center font-bold text-xs text-slate-500">ใบแสดงผลการเรียน (ส่วนที่ 1)</p>
                             </div>
 
-                            <!-- รูปใบเกรด หน้า 2 (ถ้ามี) -->
-                            <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/gpax-page2.jpg')">
+                            <!-- รูปที่ 4 -->
+                            <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/4.jpg')">
                                 <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
-                                    <!-- 🖼️ ใส่รูปใบเกรดหน้า 2 ที่นี่ -->
-                                    <img src="images/gpax-page2.jpg" alt="Transcript Page 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Transcript+Page+2'">
+                                    <!-- 🖼️ รูป 4.jpg -->
+                                    <img src="images/4.jpg" alt="GPAX 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=4'">
                                     <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                         <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเอกสาร</span>
                                     </div>
                                 </div>
-                                <p class="mt-2 text-center font-bold text-xs text-slate-500">ใบรวบรวมผลการศึกษา (หน้า 2)</p>
+                                <p class="mt-2 text-center font-bold text-xs text-slate-500">ใบแสดงผลการเรียน (ส่วนที่ 2)</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 📸 TAB 3: รูปกิจกรรม (Activities Gallery) -->
+                <!-- 📸 TAB 3: รูปกิจกรรม (รูปที่ 5 - 12 รวม 8 รูป) -->
                 <div id="content-activities" class="tab-content space-y-6 hidden">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
                         <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-images"></i></span>
-                        <h3 class="text-xl font-black text-[#4A3E3D]">ภาพกิจกรรมที่เข้าร่วม (Activities)</h3>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">ภาพกิจกรรมที่เข้าร่วม (8 กิจกรรม)</h3>
                     </div>
 
-                    <!-- รายการการ์ดกิจกรรม พร้อมใส่รูปและคำอธิบาย -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto pr-2 pb-2">
+                    <!-- รายการรูปภาพกิจกรรม 5 - 12 -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5 max-h-[420px] overflow-y-auto pr-2 pb-2">
                         
-                        <!-- กิจกรรมที่ 1 -->
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity1.jpg')">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
-                                <!-- 🖼️ รูปกิจกรรม 1 -->
-                                <img src="images/activity1.jpg" alt="Activity 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+1'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
-                                </div>
-                            </div>
-                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 1</h5>
-                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
-                        </div>
-
-                        <!-- กิจกรรมที่ 2 -->
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity2.jpg')">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
-                                <!-- 🖼️ รูปกิจกรรม 2 -->
-                                <img src="images/activity2.jpg" alt="Activity 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+2'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
-                                </div>
-                            </div>
-                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 2</h5>
-                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
-                        </div>
-
-                        <!-- กิจกรรมที่ 3 -->
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity3.jpg')">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
-                                <!-- 🖼️ รูปกิจกรรม 3 -->
-                                <img src="images/activity3.jpg" alt="Activity 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+3'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
-                                </div>
-                            </div>
-                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 3</h5>
-                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
-                        </div>
-
-                        <!-- กิจกรรมที่ 4 -->
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity4.jpg')">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
-                                <!-- 🖼️ รูปกิจกรรม 4 -->
-                                <img src="images/activity4.jpg" alt="Activity 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+4'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
-                                </div>
-                            </div>
-                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 4</h5>
-                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
-                        </div>
-
-                        <!-- กิจกรรมที่ 5 -->
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity5.jpg')">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
-                                <!-- 🖼️ รูปกิจกรรม 5 -->
-                                <img src="images/activity5.jpg" alt="Activity 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+5'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
-                                </div>
-                            </div>
-                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 5</h5>
-                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
-                        </div>
-
-                        <!-- กิจกรรมที่ 6 -->
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/activity6.jpg')">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-[1rem] overflow-hidden relative border border-slate-100">
-                                <!-- 🖼️ รูปกิจกรรม 6 -->
-                                <img src="images/activity6.jpg" alt="Activity 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=Activity+6'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยายรูป</span>
-                                </div>
-                            </div>
-                            <h5 class="mt-2 font-extrabold text-xs text-[#4A3E3D] truncate">ชื่อกิจกรรมที่ 6</h5>
-                            <p class="text-[10px] font-semibold text-slate-400 line-clamp-2">คำอธิบายสั้นๆ เกี่ยวกับกิจกรรมและหน้าที่ที่ได้รับมอบหมาย</p>
-                        </div>
+                        <!-- 🖼️ รูป 5.jpg ถึง 12.jpg -->
+                        <script>
+                            for (let i = 5; i <= 12; i++) {
+                                document.write(`
+                                    <div class="group bg-white border-2 border-[#FFCAD4] p-2 rounded-[1.2rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/${i}.jpg')">
+                                        <div class="aspect-[4/3] bg-slate-50 rounded-[0.9rem] overflow-hidden relative border border-slate-100">
+                                            <img src="images/${i}.jpg" alt="กิจกรรมที่ ${i-4}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/400x300/ffe5ec/4a3e3d?text=${i}'">
+                                            <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                                <span class="text-[10px] font-bold bg-[#F4978E] text-white px-2.5 py-1 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ขยาย</span>
+                                            </div>
+                                        </div>
+                                        <h5 class="mt-1.5 text-center font-extrabold text-[11px] text-[#4A3E3D]">กิจกรรมที่ ${i-4}</h5>
+                                    </div>
+                                `);
+                            }
+                        </script>
 
                     </div>
                 </div>
 
-                <!-- 🏆 TAB 4: เกียรติบัตร (Certificates) -->
+                <!-- 🏆 TAB 4: เกียรติบัตร (รูปที่ 13 - 21 รวม 9 รูป) -->
                 <div id="content-certificates" class="tab-content space-y-6 hidden">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
                         <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-award"></i></span>
-                        <h3 class="text-xl font-black text-[#4A3E3D]">เกียรติบัตรและผลงานรางวัล (Certificates)</h3>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">เกียรติบัตรและผลงาน (9 รายการ)</h3>
                     </div>
 
-                    <!-- รายการการ์ดเกียรติบัตร -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[420px] overflow-y-auto pr-2 pb-2">
+                    <!-- รายการเกียรติบัตร 13 - 21 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 max-h-[420px] overflow-y-auto pr-2 pb-2">
                         
-                        <!-- เกียรติบัตร 1 -->
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-3 rounded-[1.8rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/cert1.jpg')">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
-                                <!-- 🖼️ รูปเกียรติบัตร 1 -->
-                                <img src="images/cert1.jpg" alt="Certificate 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Certificate+1'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเกียรติบัตร</span>
-                                </div>
-                            </div>
-                            <div class="mt-2.5 space-y-0.5">
-                                <h5 class="font-extrabold text-xs text-[#4A3E3D] truncate">รางวัล / เกียรติบัตรที่ 1</h5>
-                                <p class="text-[11px] font-semibold text-[#F4978E]">หน่วยงานผู้มอบรางวัล / โรงเรียน</p>
-                            </div>
-                        </div>
-
-                        <!-- เกียรติบัตร 2 -->
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-3 rounded-[1.8rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/cert2.jpg')">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
-                                <!-- 🖼️ รูปเกียรติบัตร 2 -->
-                                <img src="images/cert2.jpg" alt="Certificate 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Certificate+2'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเกียรติบัตร</span>
-                                </div>
-                            </div>
-                            <div class="mt-2.5 space-y-0.5">
-                                <h5 class="font-extrabold text-xs text-[#4A3E3D] truncate">รางวัล / เกียรติบัตรที่ 2</h5>
-                                <p class="text-[11px] font-semibold text-[#F4978E]">หน่วยงานผู้มอบรางวัล / โรงเรียน</p>
-                            </div>
-                        </div>
-
-                        <!-- เกียรติบัตร 3 -->
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-3 rounded-[1.8rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/cert3.jpg')">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
-                                <!-- 🖼️ รูปเกียรติบัตร 3 -->
-                                <img src="images/cert3.jpg" alt="Certificate 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Certificate+3'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเกียรติบัตร</span>
-                                </div>
-                            </div>
-                            <div class="mt-2.5 space-y-0.5">
-                                <h5 class="font-extrabold text-xs text-[#4A3E3D] truncate">รางวัล / เกียรติบัตรที่ 3</h5>
-                                <p class="text-[11px] font-semibold text-[#F4978E]">หน่วยงานผู้มอบรางวัล / โรงเรียน</p>
-                            </div>
-                        </div>
-
-                        <!-- เกียรติบัตร 4 -->
-                        <div class="group bg-white border-2 border-[#FFCAD4] p-3 rounded-[1.8rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/cert4.jpg')">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-[1.2rem] overflow-hidden relative border border-slate-100">
-                                <!-- 🖼️ รูปเกียรติบัตร 4 -->
-                                <img src="images/cert4.jpg" alt="Certificate 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=Certificate+4'">
-                                <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> คลิกส่องเกียรติบัตร</span>
-                                </div>
-                            </div>
-                            <div class="mt-2.5 space-y-0.5">
-                                <h5 class="font-extrabold text-xs text-[#4A3E3D] truncate">รางวัล / เกียรติบัตรที่ 4</h5>
-                                <p class="text-[11px] font-semibold text-[#F4978E]">หน่วยงานผู้มอบรางวัล / โรงเรียน</p>
-                            </div>
-                        </div>
+                        <!-- 🖼️ รูป 13.jpg ถึง 21.jpg -->
+                        <script>
+                            for (let i = 13; i <= 21; i++) {
+                                document.write(`
+                                    <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.5rem] shadow-sm hover:border-[#F4978E] hover:-translate-y-1 transition-all cursor-pointer" onclick="openLightbox('images/${i}.jpg')">
+                                        <div class="aspect-[4/3] bg-slate-50 rounded-[1.1rem] overflow-hidden relative border border-slate-100">
+                                            <img src="images/${i}.jpg" alt="เกียรติบัตรใบที่ ${i-12}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x450/ffe5ec/4a3e3d?text=${i}'">
+                                            <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                                <span class="text-xs font-bold bg-[#F4978E] text-white px-3 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-magnifying-glass-plus"></i> ส่องเกียรติบัตร</span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 text-center">
+                                            <h5 class="font-extrabold text-xs text-[#4A3E3D]">เกียรติบัตรใบที่ ${i-12}</h5>
+                                        </div>
+                                    </div>
+                                `);
+                            }
+                        </script>
 
                     </div>
                 </div>
@@ -477,7 +378,7 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
         <div class="max-w-4xl max-h-[85vh] overflow-hidden rounded-[2.5rem] border-4 border-[#FFCAD4] bg-white p-2 shadow-2xl animate-swing-calm">
-            <img id="lightbox-img" class="w-full h-full object-contain max-h-[82vh] rounded-[2rem]" src="" alt="Expanded View">
+            <img id="lightbox-img" class="w-full h-full object-contain max-h-[82vh] rounded-[2rem]" src="" alt="View Large Image">
         </div>
     </div>
 
@@ -488,31 +389,27 @@
 
     <!-- ================= JAVASCRIPT ================= -->
     <script>
-        // 1. ฟังก์ชันสลับแท็บ (SOP, GPAX, Activities, Certificates)
+        // ฟังก์ชันสลับแท็บ
         function switchTab(tabId) {
-            // ซ่อนทุกๆ Content
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => {
                 content.classList.add('hidden');
             });
 
-            // คืนค่าปุ่มกดทั้งหมดเป็น Inactive
             const tabs = document.querySelectorAll('.tab-btn');
             tabs.forEach(tab => {
                 tab.classList.remove('btn-active');
                 tab.classList.add('btn-inactive');
             });
 
-            // แสดง Content ที่เลือก
             document.getElementById(`content-${tabId}`).classList.remove('hidden');
 
-            // เปลี่ยนปุ่มที่เลือกเป็น Active
             const activeTab = document.getElementById(`tab-${tabId}`);
             activeTab.classList.remove('btn-inactive');
             activeTab.classList.add('btn-active');
         }
 
-        // 2. ระบบ Lightbox ดูรูปขยายใหญ่
+        // ระบบ Lightbox ส่องรูปขยายใหญ่
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
