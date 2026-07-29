@@ -197,7 +197,10 @@
             
             <!-- 📌 แถบเมนูควบคุม -->
             <nav class="flex flex-wrap gap-2 md:gap-3 border-b-4 border-[#FFCAD4] pb-0.5">
-                <button onclick="switchTab('sop')" id="tab-sop" class="tab-btn btn-3d-control btn-active jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
+                <button onclick="switchTab('profile')" id="tab-profile" class="tab-btn btn-3d-control btn-active jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-user-sparkles text-sm"></i> ประวัติส่วนตัว
+                </button>
+                <button onclick="switchTab('sop')" id="tab-sop" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
                     <i class="fa-solid fa-file-lines text-sm"></i> SOP
                 </button>
                 <button onclick="switchTab('gpax')" id="tab-gpax" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-5 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
@@ -214,8 +217,127 @@
             <!-- แผงบรรจุเนื้อหาแต่ละแท็บ -->
             <div class="bg-white/95 border-4 border-[#FFCAD4] rounded-b-[2.5rem] rounded-tr-[2.5rem] p-6 md:p-8 shadow-xl min-h-[480px] relative">
                 
-                <!-- 📄 TAB 1: SOP (รูปที่ 2) -->
-                <div id="content-sop" class="tab-content space-y-6">
+                <!-- 👤 TAB 1: ประวัติส่วนตัว (Profile) -->
+                <div id="content-profile" class="tab-content space-y-6">
+                    <div class="flex items-center justify-between border-b border-[#FFF0F2] pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-address-card"></i></span>
+                            <h3 class="text-xl font-black text-[#4A3E3D]">ประวัติส่วนตัว (Personal Profile)</h3>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- 1. ข้อมูลส่วนตัว -->
+                        <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-5 rounded-[2rem] space-y-3 shadow-sm">
+                            <h4 class="font-extrabold text-[#F4978E] flex items-center gap-2 text-sm border-b border-[#FFCAD4]/40 pb-2">
+                                <i class="fa-solid fa-id-card"></i> ข้อมูลส่วนตัว
+                            </h4>
+                            <ul class="text-xs space-y-2.5 font-semibold text-slate-600">
+                                <li><strong class="text-[#4A3E3D]">ชื่อ-นามสกุล (TH):</strong> ณัฐธิดา รัศมี</li>
+                                <li><strong class="text-[#4A3E3D]">ชื่อ-นามสกุล (EN):</strong> Natthida Ratsamee</li>
+                                <li><strong class="text-[#4A3E3D]">ชื่อเล่น:</strong> มัดหมี่</li>
+                                <li><strong class="text-[#4A3E3D]">วัน/เดือน/ปีเกิด:</strong> 10 กุมภาพันธ์ 2552</li>
+                                <li><strong class="text-[#4A3E3D]">อายุ:</strong> 17 ปี</li>
+                                <li><strong class="text-[#4A3E3D]">สัญชาติ/เชื้อชาติ:</strong> ไทย / ไทย</li>
+                                <li><strong class="text-[#4A3E3D]">ศาสนา:</strong> พุทธ</li>
+                            </ul>
+                        </div>
+
+                        <!-- 2. ข้อมูลผู้ปกครอง -->
+                        <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-5 rounded-[2rem] space-y-3 shadow-sm">
+                            <h4 class="font-extrabold text-[#F4978E] flex items-center gap-2 text-sm border-b border-[#FFCAD4]/40 pb-2">
+                                <i class="fa-solid fa-users"></i> ข้อมูลผู้ปกครอง
+                            </h4>
+                            <div class="space-y-3 text-xs font-semibold">
+                                <div class="p-3 bg-white rounded-xl border border-[#FFCAD4]/40">
+                                    <p class="font-bold text-[#4A3E3D]">บิดา: <span class="font-normal text-slate-600">นายสมชาย รัศมี</span></p>
+                                    <p class="text-slate-500 mt-1">อายุ: 58 ปี | อาชีพ: เกษตรกร</p>
+                                </div>
+                                <div class="p-3 bg-white rounded-xl border border-[#FFCAD4]/40">
+                                    <p class="font-bold text-[#4A3E3D]">มารดา: <span class="font-normal text-slate-600">นางจุฑารัตน์ รัศมี</span></p>
+                                    <p class="text-slate-500 mt-1">อายุ: 54 ปี | อาชีพ: เกษตรกร</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. ประวัติการศึกษา -->
+                        <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-5 rounded-[2rem] space-y-3 shadow-sm md:col-span-2">
+                            <h4 class="font-extrabold text-[#F4978E] flex items-center gap-2 text-sm border-b border-[#FFCAD4]/40 pb-2">
+                                <i class="fa-solid fa-graduation-cap"></i> ประวัติการศึกษา
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                                <div class="bg-white p-3.5 rounded-xl border border-[#FFCAD4]/40 space-y-1">
+                                    <span class="text-[10px] font-bold text-[#F4978E] uppercase tracking-wider block">ระดับประถมศึกษา</span>
+                                    <p class="font-black text-[#4A3E3D]">โรงเรียนสารสาสน์วิเทศบ้านแพ้ว</p>
+                                </div>
+                                <div class="bg-white p-3.5 rounded-xl border border-[#FFCAD4]/40 space-y-1">
+                                    <span class="text-[10px] font-bold text-[#F4978E] uppercase tracking-wider block">ระดับมัธยมศึกษาตอนต้น</span>
+                                    <p class="font-black text-[#4A3E3D]">โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</p>
+                                </div>
+                                <div class="bg-white p-3.5 rounded-xl border border-[#FFCAD4]/40 space-y-1">
+                                    <span class="text-[10px] font-bold text-[#F4978E] uppercase tracking-wider block">ระดับมัธยมศึกษาตอนปลาย</span>
+                                    <p class="font-black text-[#4A3E3D]">โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. งานอดิเรก & ความสามารถพิเศษ -->
+                        <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-5 rounded-[2rem] space-y-4 shadow-sm md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <h4 class="font-extrabold text-[#F4978E] flex items-center gap-2 text-sm border-b border-[#FFCAD4]/40 pb-1.5">
+                                    <i class="fa-solid fa-heart"></i> งานอดิเรก
+                                </h4>
+                                <div class="flex flex-wrap gap-2 text-xs pt-1">
+                                    <span class="bg-white border border-[#FFCAD4] px-3 py-1.5 rounded-full font-bold text-[#4A3E3D] shadow-xs"><i class="fa-solid fa-music text-[#F4978E] mr-1"></i> ฟังเพลง</span>
+                                    <span class="bg-white border border-[#FFCAD4] px-3 py-1.5 rounded-full font-bold text-[#4A3E3D] shadow-xs"><i class="fa-solid fa-podcast text-[#F4978E] mr-1"></i> ฟัง Podcast</span>
+                                    <span class="bg-white border border-[#FFCAD4] px-3 py-1.5 rounded-full font-bold text-[#4A3E3D] shadow-xs"><i class="fa-solid fa-book-open text-[#F4978E] mr-1"></i> อ่านหนังสือ</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h4 class="font-extrabold text-[#F4978E] flex items-center gap-2 text-sm border-b border-[#FFCAD4]/40 pb-1.5">
+                                    <i class="fa-solid fa-star"></i> ความสามารถพิเศษ
+                                </h4>
+                                <div class="flex flex-wrap gap-2 text-xs pt-1">
+                                    <span class="bg-white border border-[#FFCAD4] px-3 py-1.5 rounded-full font-bold text-[#4A3E3D] shadow-xs"><i class="fa-solid fa-bolt text-amber-400 mr-1"></i> เรียนรู้ได้เร็ว</span>
+                                    <span class="bg-white border border-[#FFCAD4] px-3 py-1.5 rounded-full font-bold text-[#4A3E3D] shadow-xs"><i class="fa-solid fa-microphone text-[#F4978E] mr-1"></i> ร้องเพลง</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. ช่องทางการติดต่อ -->
+                        <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-5 rounded-[2rem] space-y-3 shadow-sm md:col-span-2">
+                            <h4 class="font-extrabold text-[#F4978E] flex items-center gap-2 text-sm border-b border-[#FFCAD4]/40 pb-2">
+                                <i class="fa-solid fa-paper-plane"></i> ช่องทางการติดต่อ
+                            </h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                                <a href="tel:0937900361" class="bg-white p-3 rounded-2xl border border-[#FFCAD4] flex flex-col items-center justify-center text-center hover:bg-[#FFF9FA] hover:border-[#F4978E] transition-all group">
+                                    <i class="fa-solid fa-phone text-lg text-[#F4978E] mb-1 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-[10px] text-slate-400 font-bold">โทรศัพท์</span>
+                                    <span class="font-black text-[#4A3E3D] mt-0.5">093-790-0361</span>
+                                </a>
+                                <a href="https://instagram.com/m4tmeeii" target="_blank" class="bg-white p-3 rounded-2xl border border-[#FFCAD4] flex flex-col items-center justify-center text-center hover:bg-[#FFF9FA] hover:border-[#F4978E] transition-all group">
+                                    <i class="fa-brands fa-instagram text-lg text-pink-500 mb-1 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-[10px] text-slate-400 font-bold">Instagram</span>
+                                    <span class="font-black text-[#4A3E3D] mt-0.5">m4tmeeii</span>
+                                </a>
+                                <a href="https://facebook.com" target="_blank" class="bg-white p-3 rounded-2xl border border-[#FFCAD4] flex flex-col items-center justify-center text-center hover:bg-[#FFF9FA] hover:border-[#F4978E] transition-all group">
+                                    <i class="fa-brands fa-facebook text-lg text-blue-500 mb-1 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-[10px] text-slate-400 font-bold">Facebook</span>
+                                    <span class="font-black text-[#4A3E3D] mt-0.5 truncate max-w-full">Natthida Ratsamee</span>
+                                </a>
+                                <a href="mailto:natthida1937@gmail.com" class="bg-white p-3 rounded-2xl border border-[#FFCAD4] flex flex-col items-center justify-center text-center hover:bg-[#FFF9FA] hover:border-[#F4978E] transition-all group">
+                                    <i class="fa-solid fa-envelope text-lg text-amber-500 mb-1 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-[10px] text-slate-400 font-bold">Email</span>
+                                    <span class="font-black text-[#4A3E3D] mt-0.5 text-[11px] truncate max-w-full">natthida1937@gmail.com</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 📄 TAB 2: SOP (รูปที่ 2) -->
+                <div id="content-sop" class="tab-content space-y-6 hidden">
                     <div class="flex items-center justify-between border-b border-[#FFF0F2] pb-4">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-pen-nib"></i></span>
@@ -250,7 +372,7 @@
                     </div>
                 </div>
 
-                <!-- 📊 TAB 2: GPAX (รูปที่ 3 - 4) -->
+                <!-- 📊 TAB 3: GPAX (รูปที่ 3 - 4) -->
                 <div id="content-gpax" class="tab-content space-y-6 hidden">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
                         <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-chart-line"></i></span>
@@ -305,7 +427,7 @@
                     </div>
                 </div>
 
-                <!-- 📸 TAB 3: รูปกิจกรรม (รูปที่ 5 - 12 รวม 8 รูป) -->
+                <!-- 📸 TAB 4: รูปกิจกรรม (รูปที่ 5 - 12 รวม 8 รูป) -->
                 <div id="content-activities" class="tab-content space-y-6 hidden">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
                         <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-images"></i></span>
@@ -335,7 +457,7 @@
                     </div>
                 </div>
 
-                <!-- 🏆 TAB 4: เกียรติบัตร (รูปที่ 13 - 21 รวม 9 รูป) -->
+                <!-- 🏆 TAB 5: เกียรติบัตร (รูปที่ 13 - 21 รวม 9 รูป) -->
                 <div id="content-certificates" class="tab-content space-y-6 hidden">
                     <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
                         <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-award"></i></span>
