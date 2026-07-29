@@ -379,19 +379,50 @@
                         <h3 class="text-xl font-black text-[#4A3E3D]">ผลการเรียนเฉลี่ยสะสม (GPAX)</h3>
                     </div>
 
-                    <!-- แสดงเกรดเฉลี่ย -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] text-center shadow-sm">
+                    <!-- แผงแสดง GPAX หลัก & แผนการเรียน -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- GPAX 4 ภาคเรียน -->
+                        <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-5 rounded-[2rem] text-center shadow-sm relative overflow-hidden flex flex-col justify-center items-center">
+                            <span class="text-xs font-bold text-slate-400 block mb-1">GPAX 4 ภาคเรียน</span>
+                            <span class="text-4xl font-black text-[#F4978E] tracking-tight">3.98</span>
+                            <span class="text-[10px] font-extrabold text-emerald-500 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full mt-2">กำลังศึกษาอยู่</span>
+                        </div>
+
+                        <!-- แผนการเรียน -->
+                        <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-5 rounded-[2rem] text-center shadow-sm flex flex-col justify-center items-center">
                             <span class="text-xs font-bold text-slate-400 block mb-1">แผนการเรียน</span>
-                            <span class="text-base font-black text-[#4A3E3D]">คณิต-อังกฤษ</span>
+                            <span class="text-2xl font-black text-[#4A3E3D] mt-1">คณิต - อังกฤษ</span>
+                            <span class="text-[10px] font-semibold text-slate-400 mt-2"><i class="fa-solid fa-star text-amber-400 mr-1"></i> ผลการเรียนดีเยี่ยม</span>
                         </div>
-                        <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] text-center shadow-sm">
-                            <span class="text-xs font-bold text-slate-400 block mb-1">โรงเรียน</span>
-                            <span class="text-xs font-black text-[#F4978E]">กระทุ่มแบน "วิเศษสมุทคุณ"</span>
-                        </div>
-                        <div class="bg-gradient-to-br from-[#FFF5F6] to-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] text-center shadow-sm">
-                            <span class="text-xs font-bold text-slate-400 block mb-1">สถานะสถานศึกษา</span>
-                            <span class="text-base font-black text-emerald-500">กำลังศึกษาอยู่</span>
+                    </div>
+
+                    <!-- เกรดเฉลี่ยรายวิชา -->
+                    <div class="space-y-3">
+                        <h4 class="font-extrabold text-xs text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                            <i class="fa-solid fa-book-bookmark text-[#F4978E]"></i> ผลการเรียนเฉลี่ยกลุ่มสาระการเรียนรู้
+                        </h4>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <!-- ภาษาไทย -->
+                            <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-3.5 rounded-[1.5rem] text-center shadow-xs hover:border-[#F4978E] transition-all">
+                                <span class="text-[11px] font-bold text-slate-500 block">ภาษาไทย</span>
+                                <span class="text-2xl font-black text-[#4A3E3D] mt-1 block">4.00</span>
+                            </div>
+                            <!-- คณิตศาสตร์ -->
+                            <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-3.5 rounded-[1.5rem] text-center shadow-xs hover:border-[#F4978E] transition-all">
+                                <span class="text-[11px] font-bold text-slate-500 block">คณิตศาสตร์</span>
+                                <span class="text-2xl font-black text-[#4A3E3D] mt-1 block">3.91</span>
+                            </div>
+                            <!-- ภาษาต่างประเทศ -->
+                            <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-3.5 rounded-[1.5rem] text-center shadow-xs hover:border-[#F4978E] transition-all">
+                                <span class="text-[11px] font-bold text-slate-500 block">ภาษาต่างประเทศ</span>
+                                <span class="text-2xl font-black text-[#4A3E3D] mt-1 block">4.00</span>
+                            </div>
+                            <!-- สังคมศึกษา -->
+                            <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4]/60 p-3.5 rounded-[1.5rem] text-center shadow-xs hover:border-[#F4978E] transition-all">
+                                <span class="text-[11px] font-bold text-slate-500 block">สังคมศึกษา</span>
+                                <span class="text-2xl font-black text-[#4A3E3D] mt-1 block">4.00</span>
+                            </div>
                         </div>
                     </div>
 
